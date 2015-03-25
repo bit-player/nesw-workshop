@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>3 Languages in 30 Minutes</title>
+    <meta name="description" content="An incredibly quick introduction to HTML, CSS, and JavaScript">
+    <meta name="author" content="Brian Hayes">
+
+    <link rel="stylesheet" href="3langs.css">
+    <link rel="stylesheet" href="prism.css">
+
+  </head>
+
+  <body>
+    <div id="content"> 
+      <h2>3 Languages in 30 Minutes</h2>
+
+      <h3>Say hello to HTML, CSS, and JavaScript</h3>
+
+      <img src="3langs-logos.png" width="360px" height="396">
+
+      <p>Yes, it's true. Just to build a single little web page, you need to learn at least three languages. HTML (Hypertext Markup Language) sets out the basic structure of the document&mdash;its content, its substance, its bones. CSS (Cascading Style Sheets) dresses up the page, defining how things look. JavaScript brings action and interaction, setting the machinery in motion. Think of the three languages this way: HTML = nouns, CSS = adjectives and adverbs, JS = verbs.</p>
+      
+      <p>Can you really learn three languages in half an hour? Maybe not, but ... not become a fluent native speaker, but you can learn enough to survive as a tourist. We have amazing tools. We have an abundance of helpful resources—books, web sites, tutorials, reference material, online communities that are eager to answer questions.</p>
+
+      <p>Fortunately, computer languages are a good deal easier to learn than human ones. Also, in writing the HTML and CSS components of a web page you seldom need to start from scratch; there's readily available boilerplate you can adapt or customize. Hence in our half-hour tutorial we'll pause only briefly on HTML and CSS, then move on to JavaScript.</p>
+ 
+      <h4>Building stuff with HTML</h4>
+
+      <p>Here is a snippet extracted from the HTML file for the web page you are reading right now:</p>
+
+      <pre><code class="language-markup">&lt;div id="content"> 
+    &lt;h2>3 Languages in 30 Minutes&lt;/h2>
+    &lt;h3>Say hello to HTML, CSS, and JavaScript&lt;/h3>
+    &lt;img src="3langs-logos.png" width="360px" height="396">
+    &lt;p>Yes, it's true. Just to make a silly web page, . . . &lt;/p>
+    &lt;h4>Building stuff with HTML&lt;/h4>
+    &lt;p>Here is a snippet of the HTML file for the web page you are 
+    reading right now:&lt;/p>
+    . . .
+&lt;/div> &lt;!--"content"--></code></pre>
+      
+      <p>HTML is all elbows, bristling with angle brackets: '&lt;' and '&gt;'. The brackets enclose tags, such as <code class="language-markup">&lt;p></code>, and matched pairs of tags, such as <code class="language-markup">&lt;p> ... &lt;/p></code>, mark the structure and </p>
+
+      <ul class="language-markup">
+      <li><code>&lt;p> ... &lt;/p></code>: paragraph </li>
+      <li><code>&lt;div> ... &lt;/div></code>: division, an arbitrary block of text or other content that you want to treat as a unit</li>
+     </ul>
+      <ul>
+      <li>The tags need to be properly nested, like parentheses. </li>
+      </ul>
+    </div> <!--"content"-->
+<!--    <script src="3langs.js"></script>-->
+    <script src="prism.js"></script>
+  </body>
+</html>
