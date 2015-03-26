@@ -84,6 +84,19 @@ div#content {
   max-width: 700px;
 }
 
+div#header {
+  background-color: #d88e44;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+div#header h2,
+div#header h3,
+div#header h4, 
+div#header h5 {
+  color: white;  
+}
+
 hr {
   width: 50%;
 }
