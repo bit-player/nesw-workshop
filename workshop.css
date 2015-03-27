@@ -64,9 +64,10 @@ a:hover {
   color: #ff8000;
 }
 
-a:visited {
+/*a:visited {
   color: #9d6a37;
 }
+*/
 
 code {
   font-family: monospace;
