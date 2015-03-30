@@ -58,17 +58,26 @@
       <p>Even if you already have a version of Python on your machine, we suggest installing the Anaconda distribution from Continuum Analytics and using it for the workshop. It won’t interfere with your existing setup, and you can remove it later with no fuss.</p>
       
       <ul>
-        <li>Go to <a href="http://continuum.io/downloads">http://continuum.io/downloads/</a>. You should be offered an installer tailored to your operating system.
+        <li>Go to <a href="http://continuum.io/downloads" target="_blank">http://continuum.io/downloads/</a>. You should be offered an installer tailored to your operating system.
         <img src="img/Anaconda-download-panel.png" width="476" height="420">
         (If you’re offered the wrong choice, click one of the three icons at the top of the panel—windowpane, apple, tux.)</li>
+        
         <li>Unless you’re a command-line guru, you probably want the &ldquo;Graphical Installer.&rdquo;</li>
+        
         <li>Please choose Python version 2.7, which is the default option, not Python 3.4.</li>
+        
         <li>Click the button to start the download. Now might be a good time to get a cup of coffee; it’s a big file.</li>
+        
         <li>When the download completes, you should have a <code>.pkg</code> file on Macintosh or an <code>.exe</code> file on Windows. In either case, double-click it.</li>
+        
         <li>The installer program has its own on-screen instructions, and there’s also a <a href="http://docs.continuum.io/anaconda/install.html">walk-through</a> on the Anaconda website.</li>
+        
         <li>You need to choose a place to put the software. On Macintosh the default choice is your home directory. The installer may display an error message: “You cannot install Anaconda in this location.” In fact you can, if you just click another choice and then return to the home-folder selection. Or you can put the software anywhere else you’d like, such as the main &ldquo;Applications&rdquo; folder. (You may be asked for an administrator password.)</li>
+        
         <li>If all goes well, you’ll get a message saying the installation was successful.</li>
+        
         <li>And what if all <em>doesn’t</em> go well? You might find a LiveChat icon on the <a href="http://docs.continuum.io/anaconda/index.html#installation-instructions">Continuum.io install page</a>. There’s a <a href="http://docs.continuum.io/anaconda/faq.html">FAQ</a>. There’s an <a href="https://github.com/ContinuumIO/anaconda-issues/issues">Anaconda Issues</a> page on GitHub. There’s a <a href="https://groups.google.com/a/continuum.io/forum/?fromgroups#!forum/anaconda">Google Group</a> where you can ask for help. Or get in touch with us—the <a href="contact.html">workshop organizers</a>.</li>
+        
         <li>Once you’ve completed the installation, you can throw away the installer (the <code>.pkg</code> or <code>.exe</code> file). </li>
       </ul>
 
@@ -77,10 +86,10 @@
       <p>Let’s try out that shiny new programming language!</p>
       
       <ul>
-        <li>On Macintosh, open the folder where you installed Anaconda Python. Among the files and folders inside, you’ll find one called “Launcher” or “Launcher.app”; double click it. On Windows, Launcher will be found in the Start menu.</li>
-        <li>In the window that now appears, find the item labeled “ipython-notebook.” Click the dark blue “Launch” button (not the “Update” button, if there is one).</li>
-        <li>Your web browser should launch; if the browser is already running, a new window or tab will open up. You’ll see a list of files and folders, and near the upper right corner a “New Notebook” button. When you click that button, yet another tab or window opens in the browser—the IPython notebook.</li>
-        <li>The notebook is where you have a conversation with Python. Type something into the gray box, which is called a cell, and then press <code>Alt-Enter</code> (or <code>Opt-Enter</code> on Macintosh); Python replies on the line below, and creates a new cell for your next input.
+        <li>On Macintosh, open the new “anaconda” folder. Among the files and folders inside, you’ll find one called “Launcher” or “Launcher.app”; double click it. On Windows, Launcher will be found in the Start menu.</li>
+        <li>After a few seconds, a list of launchable programs should appear; find the one labeled “ipython-notebook.” Click the dark blue “Launch” button (not the “Update” button, if there is one).</li>
+        <li>A Terminal window may appear briefly, then your web browser should launch; if the browser is already running, a new window or tab will open up. You’ll see a list of files and folders, and near the upper right corner a “New Notebook” button. When you click that button, yet another tab or window opens in the browser—the IPython notebook.</li>
+        <li>The notebook is where you have a conversation with the Python interpreter. You write a Python expression in a box that has an <code>In&nbsp;[&nbsp;]:</code> prompt; the interpreter replies in an <code>Out&nbsp;[&nbsp;]:</code> box. Of course it’s not so easy to write a Python expression if you don’t know any Python. Let us resort to mathematics, the universal language. Type in a simple addition or multiplication problem, then press <code>Alt-Enter</code> (or <code>Opt-Enter</code> on Macintosh):
         <img src="img/ipython-notebook-cell-500px.png" width="500" height="218"></li>
         <li>Feel free to explore further. You might start by visiting the Help menu and taking the user interface tour. Or type ‘?’ into a cell (and press <code>Alt/Opt-Enter</code>). For a deeper dive, go to the <a href="python.html">workshop Python page</a> and download the IPython notebook you’ll find there.</li>
       </ul>
@@ -94,7 +103,7 @@
       <ul>
         <li>Brackets works best with the Google Chrome web browser. If you don’t have Chrome installed, you can get a copy at <a href="https://www.google.com/chrome/">www.google.com/chrome/</a>. But if you’d rather stick with another browser, it will probably work.</li>
         
-        <li>Download the Brackets installer from <a href="http://brackets.io/">brackets.io</a>. (The big blue download button will also fetch an Adobe program called Extract, but there’s a link in small-type just below the button that gets you Brackets alone.) On Macintosh you’ll get a <code>.dmg</code> file; double click it to pen the disk archive, then drag the application icon to some appropriate spot on your disk, such as an Applications folder. The Windows download is an <code>.msi</code> file, which you can double click to install.</li>
+        <li>Download the Brackets installer from <a href="http://brackets.io/" target="_blank">brackets.io</a>. (The big blue download button will also fetch an Adobe program called Extract, but there’s a link in small-type just below the button that gets you Brackets alone.) On Macintosh you’ll get a <code>.dmg</code> file; double click it to open the disk archive, then drag the application icon to some appropriate spot on your disk, such as an Applications folder. The Windows download is an <code>.msi</code> file, which you can double click to install.</li>
         
         <li>Now doubleclick the application icon to start the Brackets program itself. You’ll see a window displaying the text of a file named <code>index.html</code>. Near the top of the right margin of this window is a gray lightning bolt, <img src="img/gray-spark.png" width="27px" height="13px" style="display: inline-block; width=27px; height=13px; margin: 0px; vertical-align=top;">, which should turn orange when you click it: <img src="img/orange-spark.png" width="27px" height="13px" style="display: inline-block; width=27px; height=13px; margin: 0px; vertical-align=top;">. The spark represents a link to a live preview, which opens in a new window or tab in the Chrome browser, showing the fully formatted web page.</li>
         
