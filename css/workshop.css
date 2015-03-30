@@ -55,6 +55,14 @@ li {
   line-height: 1.2em;  
 }
 
+pre.terminal {
+  margin: 10px;
+}
+
+.terminal-input {
+  color: crimson;
+}
+
 a {
   text-decoration: none;
   color: #d88e44;

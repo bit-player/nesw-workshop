@@ -21,63 +21,123 @@
 
       <h2>Instructions for Participants</h2>
       
-      <p>Our workshop will be a hands-on event. You&rsquo;ll be writing, testing, and debugging your own programs on your own computer. At the end of the day, we want you to go home with a completed project that works. To make all this happen, you&rsquo;ll need to do some advance preparation. In particular, it&rsquo;s important that everyone arrive on Saturday morning with the necessary software already installed and working.</p>
+      <p>Our workshop will be a hands-on event. You’ll be writing, testing, and debugging your own programs on your own computer. At the end of the day, we want you to go home with a completed project that works. To make all this happen, you’ll need to do some advance preparation. In particular, it’s important that everyone arrive on Saturday morning with the necessary software already installed and working.</p>
+      
+      <p>Don’t be put off by the length of these instructions. The process is not really complicated, but we’ve spelled things out in detail just to be sure no one gets lost along the way.</p>
 
       <h4>What to Bring</h4>
       
-      <p>You will need a reasonably modern laptop computer, with working wifi, an up-to-date web browser, and enough available space on the disk drive for the software we&rsquo;re about to install. </p>
+      <p>You will need a reasonably modern laptop computer, with working wifi, an up-to-date web browser, and about a gigabyte of available space on the disk drive for the software we’re about to install. You may also need to have an administrator account on the machine.</p>
       
       <ul>
         <li>Windows computers should be running Windows Vista or later (version 7, 8, or 8.1).</li>
         <li>Macintosh computers need OS X version 10.6.8 (Snow Leopard) or later.</li>
-        <li>What about Linux? Should work, but we&rsquo;re not giving step-by-step instructions.</li>
-        <li>Google Chrome is the recommended web browser, but Firefox, Opera, or Safari should be fine too. If you prefer Internet Explorer, please make sure it&rsquo;s the latest version.</li>
-        <li>Installing the programming-language software will fill up about 1.1 gigabytes (1100 megabytes) of free disk space, and you&rsquo;ll briefly need even more than that during the down-load-and-install process. If you are short of disk space, please see the <a href="#squeezing">note below</a>. All of the software can easily be removed after the workshop, if you need to recover the space used.</li>
+        <li>What about Linux? Should work, but we’re not giving step-by-step instructions.</li>
+        <li>Google Chrome is the recommended web browser, but Firefox or Safari should work in a pinch. If you prefer Internet Explorer, please make sure it’s the latest version.</li>
+        <li>Installing the programming-language software will fill up about 1.1 gigabytes (1100 megabytes) of free disk space, and you’ll briefly need even more than that during the down-load-and-install process. If you are short of disk space, please see the <a href="#squeezing">note below</a>. All of the software can easily be removed after the workshop, if you need to recover the space used.</li>
       </ul>
       
-      <p>Don&rsquo;t forget to bring your power cord and charger!</p>
-        
+      <p>Don’t forget to bring your power cord and charger!</p>
+
+      <h4>The Security Question</h4>
+      
+      <p>The Internet is a rough neighborhood. We’re urging you to install gobs of software from sources you’ve probably never heard of. Is that safe?</p>
+      
+      <p>There are certainly no guarantees, but the specific software recommended here is in use by many thousands of programmers, who are well qualified to detect anything fishy going on behind the scenes. Within this social milieu, having access to the source code is generally considered a better certificate of integrity than relying on approval from Apple or Microsoft.</p>
+      
+      <p>At some stages of the installation process, you may see warnings about the risks of downloaded software. Your browser might display a message saying that “This kind of file could harm your computer.” And recent versions of the Macintosh operating system are configured by default to allow only software from the Apple store and other “trusted developers.” You will have to override or turn off these warnings (see Apple’s instructions <a href="https://support.apple.com/en-us/HT202491">here</a>).</p>
+      
+      <p>Another point to keep in mind is that we ourselves are “untrusted developers.” We’ll be playing with sharp tools that have the power to wreak havoc, say by deleting all the files on your hard disk. Such catastrophes are extremely unlikely, unless you deliberately set out to commit mischief, but it’s wroth keeping in mind that we are outside the sandbox.</p>
+      
       
       <h4>Installing Python</h4>
       
-      <p>In the workshop we&rsquo;ll be exploring two programming ecosystems: Python for data analysis (and just about any other kind of computing), and JavaScript for building interactive storytelling aids. Let&rsquo;s start with Python.</p>
+      <p>In the workshop we’ll be exploring two programming ecosystems: Python for data analysis and JavaScript for building interactive storytelling aids. But there is overlap between these two worlds, and we encourage everyone to set up a working environment for both.
+      Let’s start with Python.</p>
        
-      <p>Even if you already have a version of Python on your machine, we suggest installing the Anaconda distribution from Continuum Analytics and using it for the workshop. It won&rsquo;t interfere with your existing setup, and you can remove it later with no fuss.</p>
+      <p>Even if you already have a version of Python on your machine, we suggest installing the Anaconda distribution from Continuum Analytics and using it for the workshop. It won’t interfere with your existing setup, and you can remove it later with no fuss.</p>
       
       <ul>
         <li>Go to <a href="http://continuum.io/downloads">http://continuum.io/downloads/</a>. You should be offered an installer tailored to your operating system.
-        <img src="Anaconda-download-panel.png" width="476" height="420">
-        (If you&rsquo;re offered the wrong choice, click one of the three icons at the top of the panel—windowpane, apple, tux.)</li>
-        <li>Unless you&rsquo;re a command-line guru, you probably want the &ldquo;Graphical Installer.&rdquo;</li>
+        <img src="img/Anaconda-download-panel.png" width="476" height="420">
+        (If you’re offered the wrong choice, click one of the three icons at the top of the panel—windowpane, apple, tux.)</li>
+        <li>Unless you’re a command-line guru, you probably want the &ldquo;Graphical Installer.&rdquo;</li>
         <li>Please choose Python version 2.7, which is the default option, not Python 3.4.</li>
-        <li>Click the button to start the download. Now might be a good time to get a cup of coffee; it&rsquo;s a big file.</li>
-        <li>Note: You might see a message warning that &ldquo;This kind of file could harm your computer.&rdquo; Click the button to live dangerously.</li>
+        <li>Click the button to start the download. Now might be a good time to get a cup of coffee; it’s a big file.</li>
         <li>When the download completes, you should have a <code>.pkg</code> file on Macintosh or an <code>.exe</code> file on Windows. In either case, double-click it.</li>
-        <li>The installer program has its own on-screen instructions, and there's also a <a href="http://docs.continuum.io/anaconda/install.html">walk-through</a> on the Anaconda website.</li>
-        <li>You need to choose a place to put the software. On Macintosh the default choice is your home directory. The installer may display an error message: “You cannot install Anaconda in this location.” In fact you can, if you just click another choice and then return to the home-folder selection. Or you can put it anywhere else you’d like, such as the main &ldquo;Applications&rdquo; folder. (You may be asked for an administrator password.)</li>
+        <li>The installer program has its own on-screen instructions, and there’s also a <a href="http://docs.continuum.io/anaconda/install.html">walk-through</a> on the Anaconda website.</li>
+        <li>You need to choose a place to put the software. On Macintosh the default choice is your home directory. The installer may display an error message: “You cannot install Anaconda in this location.” In fact you can, if you just click another choice and then return to the home-folder selection. Or you can put the software anywhere else you’d like, such as the main &ldquo;Applications&rdquo; folder. (You may be asked for an administrator password.)</li>
         <li>If all goes well, you’ll get a message saying the installation was successful.</li>
-        <li>And what if all <em>doesn&rsquo;t</em> go well? You might find a LiveChat icon on the <a href="http://docs.continuum.io/anaconda/index.html#installation-instructions">Continuum.io install page</a>. There’s a <a href="http://docs.continuum.io/anaconda/faq.html">FAQ</a>. There’s an <a href="https://github.com/ContinuumIO/anaconda-issues/issues">Anaconda Issues</a> page on GitHub. There’s a <a href="https://groups.google.com/a/continuum.io/forum/?fromgroups#!forum/anaconda">Google Group</a> where you can ask for help. Or get in touch with us—the <a href="contact.html">workshop organizers</a>.</li>
+        <li>And what if all <em>doesn’t</em> go well? You might find a LiveChat icon on the <a href="http://docs.continuum.io/anaconda/index.html#installation-instructions">Continuum.io install page</a>. There’s a <a href="http://docs.continuum.io/anaconda/faq.html">FAQ</a>. There’s an <a href="https://github.com/ContinuumIO/anaconda-issues/issues">Anaconda Issues</a> page on GitHub. There’s a <a href="https://groups.google.com/a/continuum.io/forum/?fromgroups#!forum/anaconda">Google Group</a> where you can ask for help. Or get in touch with us—the <a href="contact.html">workshop organizers</a>.</li>
         <li>Once you’ve completed the installation, you can throw away the installer (the <code>.pkg</code> or <code>.exe</code> file). </li>
       </ul>
 
       <h4>Trying Out Python and IPython Notebook</h4>
       
-    
-      <h4>Command Performance</h4>
+      <p>Let’s try out that shiny new programming language!</p>
       
+      <ul>
+        <li>On Macintosh, open the folder where you installed Anaconda Python. Among the files and folders inside, you’ll find one called “Launcher” or “Launcher.app”; double click it. On Windows, Launcher will be found in the Start menu.</li>
+        <li>In the window that now appears, find the item labeled “ipython-notebook.” Click the dark blue “Launch” button (not the “Update” button, if there is one).</li>
+        <li>Your web browser should launch; if the browser is already running, a new window or tab will open up. You’ll see a list of files and folders, and near the upper right corner a “New Notebook” button. When you click that button, yet another tab or window opens in the browser—the IPython notebook.</li>
+        <li>The notebook is where you have a conversation with Python. Type something into the gray box, which is called a cell, and then press <code>Alt-Enter</code> (or <code>Opt-Enter</code> on Macintosh); Python replies on the line below, and creates a new cell for your next input.
+        <img src="img/ipython-notebook-cell-500px.png" width="500" height="218"></li>
+        <li>Feel free to explore further. You might start by visiting the Help menu and taking the user interface tour. Or type ‘?’ into a cell (and press <code>Alt/Opt-Enter</code>). For a deeper dive, go to the <a href="python.html">workshop Python page</a> and download the IPython notebook you’ll find there.</li>
+      </ul>
       
       <h4>Installing the Brackets Editor for JavaScript</h4>
+      
+      <p>For JavaScript programming, you don’t need to install JavaScript itself; the machinery for running JavaScript programs is already built into your web browser. What you <em>do</em> need is an editor program—a piece of software that will help you write JavaScript programs, and also the HTML and CSS files that form part of a web document. In principle, you could use any editor that produces plain text output, such as Notepad on Windows of Textedit on Macintosh. But a more specialized editor—one designed explicitly for writing code—will make your life easier with hundreds of little amenities such as indenting lines automatically, balancing quotation marks and parentheses, and suggesting likely continuations as you type.</p>
+      
+      <p>We recommend an editor called Brackets. Development of the software was initiated by Adobe Systems, but Brackets is now an open-source software project with a large community of contributing programmers. (The <a href="https://github.com/adobe/brackets">source code</a> is on GitHub.) Brackets is still new and evolving, but it already offers a pleasant environment for creating web documents and JavaScript programs. Especially nice is the ability to see the effects of your changes instantly in a browser window, without any need to set up a web server.</p>
+      
+      <ul>
+        <li>Brackets works best with the Google Chrome web browser. If you don’t have Chrome installed, you can get a copy at <a href="https://www.google.com/chrome/">www.google.com/chrome/</a>. But if you’d rather stick with another browser, it will probably work.</li>
+        
+        <li>Download the Brackets installer from <a href="http://brackets.io/">brackets.io</a>. (The big blue download button will also fetch an Adobe program called Extract, but there’s a link in small-type just below the button that gets you Brackets alone.) On Macintosh you’ll get a <code>.dmg</code> file; double click it to pen the disk archive, then drag the application icon to some appropriate spot on your disk, such as an Applications folder. The Windows download is an <code>.msi</code> file, which you can double click to install.</li>
+        
+        <li>Now doubleclick the application icon to start the Brackets program itself. You’ll see a window displaying the text of a file named <code>index.html</code>. Near the top of the right margin of this window is a gray lightning bolt, <img src="img/gray-spark.png" width="27px" height="13px" style="display: inline-block; width=27px; height=13px; margin: 0px; vertical-align=top;">, which should turn orange when you click it: <img src="img/orange-spark.png" width="27px" height="13px" style="display: inline-block; width=27px; height=13px; margin: 0px; vertical-align=top;">. The spark represents a link to a live preview, which opens in a new window or tab in the Chrome browser, showing the fully formatted web page.</li>
+        
+        <li>If Chrome is not installed, you’ll get an error message complaining that it can’t be found. If you choose not to install Chrome, go to the Brackets <code>File</code> menu and click the item <code>Enable Experimental Live Preview</code>. That should allow the preview to appear in your default browser.</li>
+        
+        <li>Other problems? Try the <a href="https://github.com/adobe/brackets/wiki/Troubleshooting">troubleshooting file</a>.</li>
+      </ul>
+      
+      <p>Next steps. The “Getting Started with Brackets” file that opens automatically when the program is first run has some basic information; there’s more in the <a href="https://github.com/adobe/brackets/wiki">Brackets Wiki</a>, including videos and a troubleshooting guide.</p>
+      
+      <p>If you’re unhappy with the aesthetics of the editor, you can install a new theme. Go to the file menu and click on <code>Extension Manager...</code> for a list of options. There are also some dozens of extensions that do useful or silly things.</p>
+      
+      <p>When you’re ready to start exploring JavaScript programming, take a look at <a href="javascript.html">JavaScript in a Jiffy</a>.</p>
+      
+      
+      <h4>Command Performance</h4>
+      
+      <p>All of the procedures described above are done with the familiar point-and-click interface of modern computers. Many programmers would choose to perform the same tasks from the command line. If you are not accustomed to command-line operations, it’s worth spending a few minutes to get acquainted. On a Macintosh, you run the Terminal program, which is generally installed in the Utilities folder. On Windows, Command Prompt is found via Start > All Programs > Accessories.</p>
+      
+      <p>Here is a terminal session for launching an IPython notebook. Typed input is shown in color; prompts and system output are in black. The command <code>pwd</code> prints the current working directory, and <code>cd</code> changes the directory.</p>
+           
+      <pre class="terminal">
+Last login: Sun Mar 29 16:42:25 on ttys005
+quarto:~ bph$ <span class="terminal-input">pwd</span>
+/Users/bph
+quarto:~ bph$ <span class="terminal-input">cd ~/GitHub/nesw-workshop</span>
+quarto:nesw-workshop bph$ <span class="terminal-input">ipython notebook</span>
+[I 16:45:18.795 NotebookApp] Serving notebooks from local directory: /Users/bph/GitHub/nesw-workshop
+[I 16:45:18.795 NotebookApp] The IPython Notebook is running at: http://localhost:8890/
+</pre>
+     
+      <p>Launching IPython from the command line—rather than using the Launcher application—has its advantages. In particular, it allows you to specify the directory where files will be saved.</p>
+      
+      <p>For a quick introduction to terminal commands in OS X and other varieties of Unix, try the <a href="http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line">Treehouse blog</a>. Princeton has a <a href="http://www.cs.princeton.edu/courses/archive/spr05/cos126/cmd-prompt.html">guide</a> to the Windows command prompt.</p>
       
       
       <h4 id="squeezing">Short of Disk Space?</h4>
       
-     
-      <h4>Questions that Might Be Frequently Asked</h4>
+      <p>If all this stuff just won’t fit, the first option to consider is <a href="http://conda.pydata.org/miniconda.html">Miniconda</a>. This is a version of the Anaconda installer that includes only Python itself and the conda package manager, with none of the 200 other packages. The trouble is, those packages include most of the goodies that make Python useful and fun. You can install them separately as needed, but unless you’re very selective you may again run into disk-space constraints.</p>
       
-      <p>Q. I already have Python set up the way I like it, and I'm happy with my own web-dev environment. Do I have to install the software you recommend?</p>
-      <p>A. Of course not. But you might want to run the tests mentioned above </p>
+      <p>A few services allow you to run Python and IPython “in the cloud”—that is, on someone else’s hardware. The Anaconda folks have a version of this idea called <a href="https://wakari.io/">Wakari</a>. Another implementation is called the <a href="tmpnb.org">Temporary Notebook Service</a>. But what you get for free with these services is necessarily limited. The Temporary Notebooks, for example, are truly temporary: Everything you’ve done disappears after 10 minutes of inactivity.</p>
       
-      
+      <p>What about installing the software on an external hard disk or a thumb drive? Probably not a good solution. The USB interface to an external disk is much slower than the connection to an internal drive, and so performance will be very sluggish. A better use of an external drive is to hold other files that don’t require immediate access, allowing you to clear some space on the main disk.</p>
       
      </div> <!--"content"-->
      <script src="js/nav.js"></script>
