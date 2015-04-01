@@ -126,15 +126,15 @@
       
       <p>All of the procedures described above are done with the familiar point-and-click interface of modern computers. Many programmers would choose to perform the same tasks from the command line. If you are not accustomed to command-line operations, it’s worth spending a few minutes to get acquainted. On a Macintosh, you run the Terminal program, which is generally installed in the Utilities folder. On Windows, Command Prompt is found via Start > All Programs > Accessories.</p>
       
-      <p>Here is a terminal session for launching an IPython notebook. Typed input is shown in color; prompts and system output are in black. The command <code>pwd</code> prints the current working directory, and <code>cd</code> changes the directory.</p>
+      <p>Here is a terminal session for launching an IPython notebook. Typed input is shown in color; prompts and system output are in black. The command <code>pwd</code> prints the current working directory, and <code>cd</code> changes the directory. (The “user$” prompt will be different on your machine.)</p>
            
       <pre class="terminal">
 Last login: Sun Mar 29 16:42:25 on ttys005
-quarto:~ bph$ <span class="terminal-input">pwd</span>
-/Users/bph
-quarto:~ bph$ <span class="terminal-input">cd ~/GitHub/nesw-workshop</span>
-quarto:nesw-workshop bph$ <span class="terminal-input">ipython notebook</span>
-[I 16:45:18.795 NotebookApp] Serving notebooks from local directory: /Users/bph/GitHub/nesw-workshop
+user$ <span class="terminal-input">pwd</span>
+/Users/user
+user$ <span class="terminal-input">cd ~/GitHub/nesw-workshop</span>
+nesw-workshop user$ <span class="terminal-input">ipython notebook</span>
+[I 16:45:18.795 NotebookApp] Serving notebooks from local directory: /Users/user/GitHub/nesw-workshop
 [I 16:45:18.795 NotebookApp] The IPython Notebook is running at: http://localhost:8890/
 </pre>
      
@@ -143,7 +143,7 @@ quarto:nesw-workshop bph$ <span class="terminal-input">ipython notebook</span>
       <p>If you have an older version of the Anaconda Python package (downloaded before April 1, 2015), you can update it by issuing a few simple commands. The abbreviated transcript below shows how it’s done; again, user inputs are in red.</p>
       
 <pre class="terminal">
-quarto:Python bph$ <span class="terminal-input">conda update conda</span>
+user$ <span class="terminal-input">conda update conda</span>
 Fetching package metadata: ....
 Solving package specifications: .
 Package plan for installation in environment /Applications/programming/Python/anaconda:
@@ -156,7 +156,7 @@ Fetching packages ...
 .
 .
 .
-quarto:Python bph$ <span class="terminal-input">conda update anaconda</span>
+user$ <span class="terminal-input">conda update anaconda</span>
 Fetching package metadata: ....
 Solving package specifications: .
 The following packages will be downloaded:
@@ -169,7 +169,7 @@ Fetching packages ...
 .
 .
 .
-quarto:Python bph$ <span class="terminal-input">ipython notebook</span>
+user$ <span class="terminal-input">ipython notebook</span>
 </pre>
 
       
