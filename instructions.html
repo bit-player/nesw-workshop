@@ -45,9 +45,9 @@
       
       <p>There are certainly no guarantees, but the specific software recommended here is in use by many thousands of programmers, who are well qualified to detect anything fishy going on behind the scenes. Within this social milieu, having access to the source code is generally considered a better certificate of integrity than relying on approval from Apple or Microsoft.</p>
       
-      <p>At some stages of the installation process, you may see warnings about the risks of downloaded software. Your browser might display a message saying that “This kind of file could harm your computer.” And recent versions of the Macintosh operating system are configured by default to allow only software from the Apple store and other “trusted developers.” You will have to override or turn off these warnings (see Apple’s instructions <a href="https://support.apple.com/en-us/HT202491">here</a>).</p>
+      <p>At some stages of the installation process, you may see warnings about the risks of downloaded software. Your browser might display a message saying “This kind of file could harm your computer.” And recent versions of the Macintosh operating system are configured by default to allow only software from the Apple store and other “trusted developers.” You will have to override or turn off these warnings (see Apple’s instructions <a href="https://support.apple.com/en-us/HT202491">here</a>).</p>
       
-      <p>Another point to keep in mind is that we ourselves are “untrusted developers.” We’ll be playing with sharp tools that have the power to wreak havoc, say by deleting all the files on your hard disk. Such catastrophes are extremely unlikely, unless you deliberately set out to commit mischief, but it’s wroth keeping in mind that we are outside the sandbox.</p>
+      <p>Another point to keep in mind is that we ourselves are “untrusted developers.” We’ll be playing with sharp tools that have the power to wreak havoc, say by deleting all the files on your hard disk. Such catastrophes are extremely unlikely, unless you deliberately set out to commit mischief, but it’s worth keeping in mind that we are playing outside the sandbox.</p>
       
       
       <h4>Installing Python</h4>
@@ -76,11 +76,13 @@
         
         <li>If all goes well, you’ll get a message saying the installation was successful.</li>
         
-        <li>And what if all <em>doesn’t</em> go well? You might find a LiveChat icon on the <a href="http://docs.continuum.io/anaconda/index.html#installation-instructions">Continuum.io install page</a>. There’s a <a href="http://docs.continuum.io/anaconda/faq.html">FAQ</a>. There’s an <a href="https://github.com/ContinuumIO/anaconda-issues/issues">Anaconda Issues</a> page on GitHub. There’s a <a href="https://groups.google.com/a/continuum.io/forum/?fromgroups#!forum/anaconda">Google Group</a> where you can ask for help. Or get in touch with us—the <a href="contact.html">workshop organizers</a>.</li>
+        <li>And what if all <em>doesn’t</em> go well? You might find a LiveChat icon on the <a href="http://docs.continuum.io/anaconda/index.html#installation-instructions">Continuum.io install page</a>. There’s a <a href="http://docs.continuum.io/anaconda/faq.html">FAQ</a>. There’s an <a href="https://github.com/ContinuumIO/anaconda-issues/issues">Anaconda Issues</a> page on GitHub. There’s a <a href="https://groups.google.com/a/continuum.io/forum/?fromgroups#!forum/anaconda">Google Group</a> where you can ask for help. Or get in touch with us—the workshop organizers.</li>
         
-        <li>Once you’ve completed the installation, you can throw away the installer (the <code>.pkg</code> or <code>.exe</code> file). </li>
+        <li>Once you’ve completed the installation, you can throw away the installer (the <code>.pkg</code> or <code>.exe</code> file).</li>
       </ul>
-
+      
+      <p>Note: On March 31, Continuum Analytics released a major upgrade to Anaconda Python. If you downloaded the package before then, please see the instructions for updating under <a href="#command-line">Command Performance</a> below.</p>
+      
       <h4>Trying Out Python and IPython Notebook</h4>
       
       <p>Let’s try out that shiny new programming language!</p>
@@ -88,8 +90,9 @@
       <ul>
         <li>On Macintosh, open the new “anaconda” folder. Among the files and folders inside, you’ll find one called “Launcher” or “Launcher.app”; double click it. On Windows, Launcher will be found in the Start menu.</li>
         <li>After a few seconds, a list of launchable programs should appear; find the one labeled “ipython-notebook.” Click the dark blue “Launch” button (not the “Update” button, if there is one).</li>
-        <li>A Terminal window may appear briefly, then your web browser should launch; if the browser is already running, a new window or tab will open up. You’ll see a list of files and folders, and near the upper right corner a “New Notebook” button. When you click that button, yet another tab or window opens in the browser—the IPython notebook.</li>
-        <li>The notebook is where you have a conversation with the Python interpreter. You write a Python expression in a box that has an <code>In&nbsp;[&nbsp;]:</code> prompt; the interpreter replies in an <code>Out&nbsp;[&nbsp;]:</code> box. Of course it’s not so easy to write a Python expression if you don’t know any Python. Let us resort to mathematics, the universal language. Type in a simple addition or multiplication problem, then press <code>Alt-Enter</code> (or <code>Opt-Enter</code> on Macintosh):
+        <li>A Terminal window may appear briefly, then your web browser should launch; if the browser is already running, a new window or tab will open up. The banner at the top of the window will say “Jupyter.” This is going to be the new name of IPython notebook, although at the moment both names coexist.</li>
+        <li>In the Jupyter/IPython window you’ll see a list of files and folders, and near the upper right corner a “New” button. Clicking on “New” reveals a short menu; choose the “Python2” item.</li>
+        <li>Yet another tab or window should now open in the browser. At last you have reached the promised land of the notebook! This is where you have a conversation with the Python interpreter. You write a Python expression in a box that has an <code>In&nbsp;[&nbsp;]:</code> prompt; the interpreter replies in an <code>Out&nbsp;[&nbsp;]:</code> box. Of course it’s not so easy to write a Python expression if you don’t know any Python. Let us resort to mathematics, the universal language. Type in a simple addition or multiplication problem, then press <code>Alt-Enter</code> (or <code>Opt-Enter</code> on Macintosh):
         <img src="img/ipython-notebook-cell-500px.png" width="500" height="218"></li>
         <li>Feel free to explore further. You might start by visiting the Help menu and taking the user interface tour. Or type ‘?’ into a cell (and press <code>Alt/Opt-Enter</code>). For a deeper dive, go to the <a href="python.html">workshop Python page</a> and download the IPython notebook you’ll find there.</li>
       </ul>
@@ -103,7 +106,7 @@
       <ul>
         <li>Brackets works best with the Google Chrome web browser. If you don’t have Chrome installed, you can get a copy at <a href="https://www.google.com/chrome/">www.google.com/chrome/</a>. But if you’d rather stick with another browser, it will probably work.</li>
         
-        <li>Download the Brackets installer from <a href="http://brackets.io/" target="_blank">brackets.io</a>. (The big blue download button will also fetch an Adobe program called Extract, but there’s a link in small-type just below the button that gets you Brackets alone.) On Macintosh you’ll get a <code>.dmg</code> file; double click it to open the disk archive, then drag the application icon to some appropriate spot on your disk, such as an Applications folder. The Windows download is an <code>.msi</code> file, which you can double click to install.</li>
+        <li>Download the Brackets installer from <a href="http://brackets.io/" target="_blank">brackets.io</a>. (The big blue download button will also fetch an Adobe program called Extract, but there’s a link in small type just below the button that gets you Brackets alone.) On Macintosh you’ll get a <code>.dmg</code> file; double click it to open the disk archive, then drag the application icon to some appropriate spot on your disk, such as an Applications folder. The Windows download is an <code>.msi</code> file, which you can double click to install.</li>
         
         <li>Now doubleclick the application icon to start the Brackets program itself. You’ll see a window displaying the text of a file named <code>index.html</code>. Near the top of the right margin of this window is a gray lightning bolt, <img src="img/gray-spark.png" width="27px" height="13px" style="display: inline-block; width=27px; height=13px; margin: 0px; vertical-align=top;">, which should turn orange when you click it: <img src="img/orange-spark.png" width="27px" height="13px" style="display: inline-block; width=27px; height=13px; margin: 0px; vertical-align=top;">. The spark represents a link to a live preview, which opens in a new window or tab in the Chrome browser, showing the fully formatted web page.</li>
         
@@ -119,7 +122,7 @@
       <p>When you’re ready to start exploring JavaScript programming, take a look at <a href="javascript.html">JavaScript in a Jiffy</a>.</p>
       
       
-      <h4>Command Performance</h4>
+      <h4 id="command-line">Command Performance</h4>
       
       <p>All of the procedures described above are done with the familiar point-and-click interface of modern computers. Many programmers would choose to perform the same tasks from the command line. If you are not accustomed to command-line operations, it’s worth spending a few minutes to get acquainted. On a Macintosh, you run the Terminal program, which is generally installed in the Utilities folder. On Windows, Command Prompt is found via Start > All Programs > Accessories.</p>
       
@@ -136,6 +139,36 @@ quarto:nesw-workshop bph$ <span class="terminal-input">ipython notebook</span>
 </pre>
      
       <p>Launching IPython from the command line—rather than using the Launcher application—has its advantages. In particular, it allows you to specify the directory where files will be saved.</p>
+      
+      <p>If you have an older version of the Anaconda Python package (downloaded before April 1, 2015), you can update it by issuing a few simple commands. The abbreviated transcript below shows how it’s done; again, user inputs are in red.</p>
+      
+<pre class="terminal">
+quarto:Python bph$ <span class="terminal-input">conda update conda</span>
+Fetching package metadata: ....
+Solving package specifications: .
+Package plan for installation in environment /Applications/programming/Python/anaconda:
+.
+.
+.
+Proceed ([y]/n)? <span class="terminal-input">y</span>
+
+Fetching packages ...
+.
+.
+.
+The following packages will be downloaded:
+.
+.
+.
+Proceed ([y]/n)? <span class="terminal-input">y</span>
+
+Fetching packages ...
+.
+.
+.
+quarto:Python bph$ <span class="terminal-input">ipython notebook</span>
+</pre>
+
       
       <p>For a quick introduction to terminal commands in OS X and other varieties of Unix, try the <a href="http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line">Treehouse blog</a>. Princeton has a <a href="http://www.cs.princeton.edu/courses/archive/spr05/cos126/cmd-prompt.html">guide</a> to the Windows command prompt.</p>
       

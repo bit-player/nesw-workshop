@@ -131,8 +131,7 @@ img {
 }
 
 table.sched {
-  margin-left: 10%;
-  width: 80%;
+  width: 100%;
   font-size: 1.1em;
   font-family: serif;
   line-height: 1.5em;
@@ -150,4 +149,13 @@ td:last-child {
   padding-left: 20px;
   text-align: left;
   background-color: floralwhite;
+}
+
+.contact-list {
+  line-height: 1.0em;
+  float: left;
+  display: block;
+  width: 40%;
+  margin-left: 10%;
+  margin-bottom: 50px;
 }

@@ -3,13 +3,12 @@
     var menu = 
         [
           ["Home", "index.html"],
-          ["Schedule", "schedule.html"],
           ["Instructions", "instructions.html"],
+          ["Schedule", "schedule.html"],
           ["Examples", "examples.html"],
           ["Resources", "resources.html"],
           ["Python", "python.html"],
-          ["JavaScript", "javascript.html"],
-          ["Contact", "contact.html"]
+          ["JavaScript", "javascript.html"]
         ]
     var navList = document.getElementById("nav");
     for (var i = 0; i < menu.length; i++) {
