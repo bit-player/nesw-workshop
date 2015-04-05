@@ -37,6 +37,10 @@ h5 {
   font-size: 1.1em;
 }
 
+h5.byline {
+  text-align: center;
+}
+
 
 p, li {
   font-size: 1.1em;
@@ -158,4 +162,38 @@ td:last-child {
   width: 40%;
   margin-left: 10%;
   margin-bottom: 50px;
+}
+
+textarea.cm {
+  width: 100%;
+  height: 250px;
+  overflow: scroll;
+}
+
+.run-button {
+  margin-bottom: 3px;
+  position: relative;
+  left: 85%;
+}
+
+.reset-button {
+  margin-bottom: 3px;
+  position: relative;
+  left: 86%;
+}
+
+#dla-banner-div {
+  position: relative;
+  width: 100%;
+}
+
+#dla-banner-canvas {
+  display: block;
+  width: 500px;
+  margin: 10px auto 10px auto;
+}
+
+button#dla-run {
+  display: block;
+  margin: 0 auto;
 }
