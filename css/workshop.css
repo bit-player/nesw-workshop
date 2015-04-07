@@ -81,7 +81,7 @@ a:hover {
 }
 */
 
-code {
+code.button {
   font-family: monospace;
   background-color: #f4f4f4;
   padding: 1px;
@@ -167,7 +167,6 @@ td:last-child {
 textarea.cm {
   width: 100%;
   height: 250px;
-  overflow: scroll;
 }
 
 .run-button {
