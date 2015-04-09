@@ -8,7 +8,8 @@
           ["Examples", "examples.html"],
           ["Resources", "resources.html"],
           ["Python", "python.html"],
-          ["JavaScript", "javascript.html"]
+          ["JavaScript", "javascript.html"],
+          ["Workspace", "http://salty-wave-5013.herokuapp.com/"]
         ]
     var navList = document.getElementById("nav");
     for (var i = 0; i < menu.length; i++) {
