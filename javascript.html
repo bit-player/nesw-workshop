@@ -25,11 +25,14 @@
       <div id="nav"></div>
 
       <h2>JavaScript in a Jiffy</h2>
+      <h5 class="byline">[under construction]</h5>
       <h5 class="byline">by Brian Hayes</h5>
       
-      <p>The world’s computers run more programs written in JavaScript than in any other language. The reason for this popularity is not any special virtue of the language itself (although it has its merits). The big reason for writing in JavaScript is that you can publish your work on the Web, and anyone with a browser can run your program without having to download or install anything. If you are writing a story that’s going to be read online, JavaScript allows you to go beyond words and pictures, creating animated or interactive elements that are instantly available to your readers.</p>
+      <p>The world’s computers run more programs written in JavaScript than in any other language. The reason for this huge popularity is not any special virtue of the language itself. The big reason for writing in JavaScript is that you can publish your work on the Web, and anyone with a browser can run your program without having to download or install anything. If you are writing a story that’s going to be read online, JavaScript allows you to go beyond words and pictures, creating animated or interactive elements that are instantly available to your readers.</p>
       
-      <p>An example:</p> 
+      <p>These computational aids to storytelling open up a whole new channel of communication, a new way of presenting data or explaining ideas. They are especially useful in science writing, where we often have intellectually challenging material to get across. Consider the <a href="http://vizhub.healthdata.org/us-health-map/">U.S. Health Map</a>, which distills data on more than 3,000 U.S. counties into a form that allows you to step back and see overall patterns or drill down for the details. Or take the <a href="http://cliffcrosland.tumblr.com/post/115981256393/black-hole-js">JavaScript Black Hole</a>, which vividly illustrates the concept of gravitational lensing in astronomy.</p> 
+      
+      <p>The <a href="examples.html">Examples</a> page of this website lists several more impressive works in JavaScript (look under the headings Dava Viz and Simulations and Interactive Presentations). Most of those illustrations were created by virtuoso programmers with long experience and deep expertise. A one-day workshop will not bring you up to that level. But it <em>is</em> entirely possible for an amateur to construct engaging and useful web “interactives” that help explain ideas in the sciences. Here’s one of mine:</p> 
       
       <div id="dla-banner-div"><canvas id="dla-banner-canvas" width="500px" height="275px"></canvas></div>
       <button id="dla-run" onclick="dlaBanner.animate()">Run</button>
@@ -57,7 +60,9 @@
         
         <li>Throughout this tutorial, every panel with a cream-colored background and an orange border is a live JavaScript playground. The <code class="button">Run</code> button just above the panel will run the code, sending output to the JavaScript console. You can edit the code in the panel and run it again. The panel will grow as needed when you type more lines of code.</li>
         
-        <li><span class="footnote-ref" id="underlines">Underlined text</span> in this tutorial signals the presence of a peekaboo note: click to reveal it, then click again to hide it. Most of the notes elaborate on gnarly technical details, and there’s no harm in skipping them if you can suppress your curiosity.</li>
+        <li><span class="peekaboo-ref" id="underlines">Underlined text</span> in this tutorial signals the presence of a peekaboo note: click to reveal it, then click again to hide it. Most of the notes elaborate on gnarly technical details, and there’s no harm in skipping them if you can suppress your curiosity.</li>
+        
+        <p id="note-underlines" class="peekaboo-note shuttered">The other notes are more informative than this one, I promise.</p>
       
       </ul>
       
@@ -88,11 +93,13 @@ for (var i = 0; i &lt;= 20; i++) {
 }
 </textarea>
       
-      <p>You may not fully understand the program above—and if you do, you might as well skip the rest of this tutorial—but you can play with it anyway. Go ahead and run the program. With your JavaScript console open, press the <code class="button">Run</code> button and you’ll see the program’s output in the console. Try editing the code, and then run it again to see the effect of your changes. For example, in line 18 you might change <code class="language-javascript">i &lt;= 20</code> to <code class="language-javascript">i &lt;= 50</code> to see some larger Fibonacci numbers. Or make line 9 read <code class="language-javascript">var a = 2, b = 1, tmp;</code> to generate a slightly less famous sequence known as the Lucas numbers. Another <span class="footnote-ref" id="phi">experiment worth trying</span>: Change line 15 to <code class="language-javascript">return b / a;</code>. Or just go wild—modify the code in anyway you want, or replace if with your own program. If you ever want to get back to the original state of the code, that’s what the <code class="button">Reset</code> button is for. You can also clear the list of past outputs in the console window, although the command for doing so differs from browser to browser.</p>
+      <p>You may not fully understand the program above—and if you do, you might as well skip the rest of this tutorial—but you can play with it anyway. Go ahead and run the program. With your JavaScript console open, press the <code class="button">Run</code> button and you’ll see the program’s output in the console. Try editing the code, and then run it again to see the effect of your changes. For example, in line 18 you might change <code class="language-javascript">i &lt;= 20</code> to <code class="language-javascript">i &lt;= 50</code> to see some larger Fibonacci numbers. Or make line 9 read <code class="language-javascript">var a = 2, b = 1, tmp;</code> to generate a slightly less famous sequence known as the Lucas numbers. Another <span class="peekaboo-ref" id="phi">experiment worth trying:</span> Change line 15 to <code class="language-javascript">return b / a;</code>. Or just go wild—modify the code in anyway you want, or replace if with your own program. If you ever want to get back to the original state of the code, that’s what the <code class="button">Reset</code> button is for. You can also clear the list of past outputs in the console window, although the command for doing so differs from browser to browser.</p>
+      
+      <p id="note-phi" class="peekaboo-note shuttered">The ratio of successive Fibonacci numbers converges to a number called phi, also known as the golden ratio. The numerical value is about 1.618. If you’re into this sort of thing, you might want to try the experiment and see what value the ratio of successive Lucas numbers converges to.</p>
       
       <p>What if you make a mistake? It won’t be the first time a computer program has had a bug in it. With some kinds of errors, the program will run but give a wrong answer. More likely, it won’t run at all, and you’ll see an error message in the console. The most annoying goofs are those that cause the program to run forever—to enter an <em>infinite loop</em>. If you’re lucky, the browser will complain about a script that’s taking too long and offer you an opportunity to stop it. Otherwise, you may have to close the tab or window, or even shut down your browser.</p>
       
-      <p>One more thing before moving on. Notice in line 20 the phrase <code class="language-javascript">console.log( ... );</code>. This command is how we direct output to the JavaScript console. Anything inside the parentheses is printed on the colsole. In a finished program <code class>console.log</code> commands almost never appear, but they are a useful way of peeking inside the program during development and testing. In this tutorial they are the communications channel we need to have a dialogue with JavaScript.</p>
+      <p>One more thing before moving on. Notice in line 20 the phrase <code class="language-javascript">console.log( ... );</code>. This command is how we direct output to the JavaScript console. Anything inside the parentheses is printed on the console. In a finished program <code class>console.log</code> commands almost never appear, but they are a useful way of peeking inside the program during development and testing. In this tutorial they are the communications channel we need to have a dialogue with JavaScript.</p>
       
       <p>Give it a try in the editor panel below. I have filled in the tired old greeting that has been a cliché of programming language manuals for almost 40 years. Improve on it! Personalize it. Add some more <code>console.log</code> statements of your own. Try putting other kinds of values in the parentheses—maybe an arithmetic expression such as <code class="language-javascript">6 * 7</code>. Again, press the <code class="button">Run</code> button and make sure the result in the console is what you expected to see.</p>
       
@@ -137,16 +144,21 @@ console.log(coinFlip());
       
       <p>To call a function, just write its name followed by a pair of parentheses enclosing the values that will become inputs (or <em>arguments</em>) to the function. For example, consider the function <code>square</code>, which is defined above with the parameter list <code>(n)</code> and the body <code>{ return n * n }</code>. Invoking this function as <code>square(12)</code> gives the parameter <code>n</code> a value of 12, and so the computation done in the body of the body of the function is 12 &times; 12 = 144. Calling <code>square(15)</code>, on the other hand, returns 225.</p>
            
-      <p>Some functions are associated with or belong to a particular object in the JavaScript system. They are known as <em>methods</em>, and there is a special “dotted” syntax for calling them. We have already met one such method: In <code>console.log()</code>, the <code>log()</code> function is method of the <code>console</code> object. Another example is the square root function, which is a method of an object named Math. You calculate the square root of 2 by writing <code>Math.sqrt(2)</code>.</p>
+      <p>Some functions are associated with or belong to a particular object in the JavaScript system. They are known as <em>methods</em>, and there is a special “dotted” syntax for calling them. We have already met one such method: In <code>console.log()</code>, the <code>log()</code> function is a method of the <code>console</code> object. Another example is the square root function, which is a method of an object named Math. You calculate the square root of 2 by writing <code>Math.sqrt(2)</code>.</p>
             
-      <p><strong>Your first JavaScript exercise:</strong> Write a function <code>celsius</code> that does the inverse of <code>fahrenheit</code>. You can insert the definition anywhere you wish in the panel above, then write a <code>console.log()</code> statement that tests your function for the Fahrenheit values 32 and 212. (If you’re stuck, here’s <span class="footnote-ref" id="celsius-answer">my answer</span>.)</p>
+      <p><strong>Your first JavaScript exercise:</strong> Write a function <code>celsius</code> that does the inverse of <code>fahrenheit</code>. You can insert the definition anywhere you wish in the panel above, then write a <code>console.log()</code> statement that tests your function for the Fahrenheit values 32 and 212. (If you’re stuck, here’s <span class="peekaboo-ref" id="celsius-answer">my answer</span>.)</p>
       
+      <p id="note-celsius-answer" class="peekaboo-note shuttered"><code class="language-javascript">function celsius(fahrenheit) { return (fahrenheit - 32) * (100 / 180); }</code></p>
+      
+
       
       <h4>Back to Basics</h4>
       
       <p>It’s time to build up some vocabulary and learn the minutiae of spelling, grammar, and puctuation.</p>
       
-      <p>The simplest elements of JavaScript are numbers, text strings, and <span class="footnote-ref" id="booleans">boolean truth values.</span></p>
+      <p>The simplest elements of JavaScript are numbers, text strings, and <span class="peekaboo-ref" id="booleans">boolean truth values.</span></p>
+      
+      <p id="note-booleans" class="peekaboo-note shuttered">Named for the 19th-century logician George Boole.</p>
       
       <ul>
         <li>Some numbers: <code class="language-javascript">1, -42, 3.14159, 6.02e23, 0x00ff88, Infinity</code>. Numbers can be written in various ways: as integers, as decimal values, in scientific notation. Under the hood, they’re all the same—so-called floating-point numbers.</li>
@@ -215,11 +227,15 @@ var verbs = ["created", "adored", "believed in", "motivated", "confused",
 console.log(nouns[5], verbs[6], nouns[0]);
 </textarea>
      
-      <p>Try modifying the <code>console.log</code> statement to generate a different sentence. Or insert a statement such as <code class="language-javascript">verbs[6] = "sniffed"</code> on line 5 to replace one of the words. Feeling adventurous? In selecting an array element, the expression inside the square brackets doesn’t have to be a plain number; it could be any expression that yields a number in the appropriate range, such as <code class="language-javascript">verbs[1 + 4]</code>. The JavaScript fragment <code class="language-javascript">Math.floor(Math.random() * 7)</code> returns a random integer between 0 and 6. Can you use this expression to generate some random nonsense about Big Papi, spaghetti, and so on? <span class="footnote-ref" id="nonsense">(Hint.)</span></p>
+      <p>Try modifying the <code>console.log</code> statement to generate a different sentence. Or insert a statement such as <code class="language-javascript">verbs[6] = "sniffed"</code> on line 5 to replace one of the words. Feeling adventurous? In selecting an array element, the expression inside the square brackets doesn’t have to be a plain number; it could be any expression that yields a number in the appropriate range, such as <code class="language-javascript">verbs[1 + 4]</code>. The JavaScript fragment <code class="language-javascript">Math.floor(Math.random() * 7)</code> returns a random integer between 0 and 6. Can you use this expression to generate some random nonsense about Big Papi, spaghetti, and so on? <span class="peekaboo-ref" id="nonsense">(Hint.)</span></p>
+      
+      <p id="note-nonsense" class="peekaboo-note shuttered">The brute-force method is to copy the expression <code class="language-javascript">Math.floor(Math.random() * 7)</code> three times, putting it into each of the array references. A better idea is to define a function—maybe call it <code>random7()</code>—with <code class="language-javascript">return Math.floor(Math.random() * 7)</code> in the body.</p>
       
       <p>Arrays have still more tricks. For example, every array comes with a built-in method for reversing the order of its elements, and another for sorting them.</p>
       
-      <p>Whereas arrays let you put items in numerical order, objects organize things by naming them. A name, or <em>key</em>, is a text string or anything that JavaScript <span class="footnote-ref" id="object-keys">can turn into a string.</span> Each key is associated with a value, which can be pretty much anything—a string, a number, an array, another object. In written form, an object is a list of key:value pairs separated by commas and enclosed in curly braces, like so:</p>
+      <p>Whereas arrays let you put items in numerical order, objects organize things by naming them. A name, or <em>key</em>, is a text string or anything that JavaScript <span class="peekaboo-ref" id="object-keys">can turn into a string.</span> Each key is associated with a value, which can be pretty much anything—a string, a number, an array, another object. In written form, an object is a list of key:value pairs separated by commas and enclosed in curly braces, like so:</p>
+      
+      <p id="note-object-keys" class="peekaboo-note shuttered">All the keys in an object are treated as strings, even if they are not wrapped in quotation marks. For example, the key in the object <code class="language-javascript">{pi: 3.142}</code> is really <code class="language-javascript">"pi"</code>, and in <code class="language-javascript">{3.142: "pi"}</code> the key is not the number <code class="language-javascript">3.142</code> but the five-character string <code class="language-javascript">"3.142"</code>. When a key is a string that includes whitespace characters, quotation marks are mandatory: <code class="language-javascript">{"the key": "the value"}</code>. Moreover, with such keys the object’s property values can be accessed only with the array-like notation <code class="language-javascript">obj["the key"]</code>; the dotted form <code class="language-javascript">obj."the key"</code> won’t work.</p>
       
       <ul>
         <li><code class="language-javascript">{"the key": "the value"}</code></li>
@@ -252,7 +268,9 @@ console.log(famousNumbers);
       
       <p>A rite of passage when you go from elementary school arithmetic to high school algebra is the introduction of <em>variables</em>— when you learn to solve for <em>x</em>. Variables are also crucial to computer programming, although their semantics is subtly different. The mathematical equation <em>x</em>&nbsp;=&nbsp;<em>y</em>&nbsp;+&nbsp;1 states a relationship: The value of <em>x</em> is equal to 1 more than the value of <em>y</em>, no matter what the specific values of <em>x</em> and <em>y</em> happen to be at any given moment. In JavaScript, <code class="language-javascript">x = y + 1</code> is not an equation but an assignment statement; when the statement is executed, it looks up the current value of <code>y</code> at that moment, adds 1, then sets the value of <code>x</code> equal to the result.</p>
       
-      <p>In several of the code snippets above, you have already seen variables and assignment statements. Variables are introduced (or <em><span class="footnote-ref" id="declarations">declared</span></em>) with the keyword <code class="language-javascript">var</code>. You can assign the variable an initial value if you wish, and you can bundle several declarations into a single statement.</p>
+      <p>In several of the code snippets above, you have already seen variables and assignment statements. Variables are introduced (or <em><span class="peekaboo-ref" id="declarations">declared</span></em>) with the keyword <code class="language-javascript">var</code>. You can assign the variable an initial value if you wish, and you can bundle several declarations into a single statement.</p>
+      
+      <p id="note-declarations" class="peekaboo-note shuttered">If you neglect to declare a variable, JavaScript won’t complain. However, the undeclared variable will have <em>global scope</em>: It will be accessible everywhere in the program, and perhaps even in other JavaScript programs running on the same web page. That’s asking for trouble, since the same variable name could be used elsewhere for another purpose.</p>
       
       <ul>
         <li><code class="language-javascript">var x = 0; // initial value is 0</code></li>
@@ -279,7 +297,9 @@ console.log(famousNumbers);
         <li><code class="language-javascript">"five" === "Five"  // returns false</code></li>
       </ul>
       
-      <p>JavaScript actually has two equality operators, <code>==</code> and <code>===</code>. The triple equal sign applies a <span class="footnote-ref" id="equality">stricter standard</span> of what it means for two things to be equal; you’ll seldom go wrong if you stick to the strict one. Likewise the two <em>inequality</em> operators, <code>!=</code> and <code>!==</code>, differ on what it means to be different. Again, the strict version <code>!==</code> is preferred.</p>
+      <p>JavaScript actually has two equality operators, <code>==</code> and <code>===</code>. The triple equal sign applies a <span class="peekaboo-ref" id="equality">stricter standard</span> of what it means for two things to be equal; you’ll seldom go wrong if you stick to the strict one. Likewise the two <em>inequality</em> operators, <code>!=</code> and <code>!==</code>, differ on what it means to be different. Again, the strict version <code>!==</code> is preferred.</p>
+      
+      <p id="note-equality" class="peekaboo-note shuttered">The difference between the two equality operators shows up when you compare values that have different data types, such as a number and a string. For example, <code class="language-javascript">0 === "0"</code> returns <code>false</code>, but <code class="language-javascript">0 == "0"</code> returns <code>true</code> because JavaScript converts the string to a number.</p>
       
       <p>Alongside the equality/inequality operators are four more operators that define the relations greater-than (<code>></code>), less-than (<code>&lt;</code>), greater-than-or-equal (<code>>=</code>), and less-than-or-equal (<code>&lt;=</code>). Applying these comparisons to numerical values is straightforward. They are also defined for text strings, with the notion of greater and less determined by alphabetical order.</p>
       
@@ -312,7 +332,22 @@ console.log(difference(7, 15));
       
       <p>Immediately following the keyword <code>if</code> is an expression wrapped in parentheses, called a <em>predicate</em>; the predicate must return a value that JavaScript can interpret as either <code>true</code> or <code>false</code>. (The parentheses are mandatory, by the way.) The next statement or block of statements, called the <em>consequent</em>, is executed if the predicate is <code>true</code>; if the predicate is <code>false</code>, the consequent is ignored. The <code>else</code> clause is optional. If an <code>else</code> is present, the statement labeled <em>alternative</em> is executed.</p>
       
-      <p>A single <code>if</code> statement is usually easy to understand, but the logic can grow tangled when multiple <code>if</code>s and <code>else</code>s are combined or nested inside one another. The horrid code below does nothing more than pick out the middle value from a set of three numbers. There must be an easier way, no? See if you can replace my mess with something tidier. <span class="footnote-ref" id="median-hint">Hint.</span> <span class="footnote-ref" id="median-answer">My answer.</span></p>
+      <p>A single <code>if</code> statement is usually easy to understand, but the logic can grow tangled when multiple <code>if</code>s and <code>else</code>s are combined or nested inside one another. The horrid code below does nothing more than pick out the middle value from a set of three numbers. There must be an easier way, no? See if you can replace my mess with something tidier. <span class="peekaboo-ref" id="median-hint">Hint.</span> <span class="peekaboo-ref" id="median-answer">My answer.</span></p>
+      
+      <p id="note-median-hint" class="peekaboo-note shuttered">Try putting the three numbers in an array and applying the <code>.sort()</code> method, then choose the middle one.</p>
+      
+      <p id="note-median-answer" class="peekaboo-note shuttered">This function passes the tests for the given numbers, <code>1, 2, 3</code>:<br>
+<code class="language-javascript" style="background-color: white;">function median(x, y, z) {<br>
+  var list = [x, y, z].sort();<br>
+  return list[1];  // note index 1 is second element<br>
+  }</code><br>
+      However, it will not give correct results in other cases because the <code>.sort()</code> method defaults to an alphabetic sorting, where "11" is less than "9", for example. To get sensible results for any numbers, you need to supply <code>.sort()</code> with an ordering function. Here’s one way to do it:<br>
+<code class="language-javascript" style="background-color: white;">function median(x, y, z) {<br>
+  function numericOrder(a, b) { return a - b; }<br>
+  var list = [x, y, z].sort();<br>
+  return list[1];  // note index 1 is second element<br>
+  }</code><br>
+      </p>
       
 <textarea class="cm">
 function median(x, y, z) {
@@ -359,7 +394,9 @@ console.log(median(3, 2, 1))
       
       <p>Running around in circles sounds unproductive, but looping or iteration is an essential element of almost all programs. JavaScript has two main constructs for looping, called <code>for</code> and <code>while</code>.</p>
       
-      <p>A <code>for</code> loop executes a block of statements for a <span class="footnote-ref" id="for-loop-index">fixed number</span> of times.</p>
+      <p>A <code>for</code> loop executes a block of statements for a <span class="peekaboo-ref" id="for-loop-index">fixed number</span> of times.</p>
+      
+      <p id="note-for-loop-index" class="peekaboo-note shuttered">Well, the number of iterations isn’t necessarily fixed. If you fiddle with the index variable in the body of the loop, anything could happen. Not recommended. There is also a <code>break</code> statement that prematurely exits the loop.</p>
       
 <textarea class="cm">
 function factorialFor(n) {
@@ -378,7 +415,9 @@ console.log(factorialFor(10));</textarea>
       
       <p>Quick exercise: Put a <code>console.log()</code> statement inside the loop, so that you can see a running record of how the value of <code>result</code> grows with each interation.</p>
       
-      <p>By the way, statements like <code class="language-javascript">i = i + 1</code> are often written in the shortcut notation <code class="language-javascript">i += 1</code>, where the <code>+=</code> does both the addition and the assignment. There’s a <span class="footnote-ref" id="increment">whole set of such shortcuts</span>, including <code>-=</code>, <code>*=</code>, and <code>/=</code>. </p>
+      <p>By the way, statements like <code class="language-javascript">i = i + 1</code> are often written in the shortcut notation <code class="language-javascript">i += 1</code>, where the <code>+=</code> does both the addition and the assignment. There’s a <span class="peekaboo-ref" id="increment">whole set of such shortcuts</span>, including <code>-=</code>, <code>*=</code>, and <code>/=</code>. </p>
+      
+      <p id="note-increment" class="peekaboo-note shuttered">In the specific case of adding 1 to a variable, or subtracting 1 from it, there are even shorter cuts: <code>i++</code> and <code>i--</code>, as well as the subtly different <code>++i</code> and <code>--i</code>. </p>
       
       <p>A <code>while</code> loop keeps repeating a block of statements until some stated condition is no longer true. In the code below, the controlling condition is <code>(n &gt;= 0)</code>. In the body of the <code>while</code> loop, we multiply <code>result</code> by the current value of <code>n</code>. The output of the function is identical to that of the <code>for</code>-loop version above. But if you put a <code>console.log()</code> statement inside the loop, you’ll see that the computation takes a different path to that answer.</p>
       
@@ -412,7 +451,7 @@ function factorialRecur(n) {
 console.log(factorialRecur(10));
 </textarea>
      
-      <p>This time there’s no explicit looping structure in evidence—no <code>for</code>, no <code>while</code>. Instead, there’s an <code>if</code> statement, and a call to the very function we are in the midst of defining. One way to understand what’s going on here is to put yourself inside the head of the function as it tries to complete the calculation. The inner monologue might go like this: “I am being asked for the factorial of <em>n</em>. If <em>n</em> = 1, I just return 1, but otherwise don’t know the answer. What I <em>do</em> know is that the factorial of <em>n</em> is equal to <em>n</em> times the factorial of <em>n</em> - 1. So I’ll just ask myself for the factorial of <em>n</em> - 1, multiply whatever comes back by <em>n</em>, and return that result.”</p>
+      <p>This time there’s no explicit looping structure in evidence—no <code>for</code>, no <code>while</code>. Instead, there’s an <code>if</code> statement, and a call to the very function we are in the midst of defining. One way to understand what’s going on here is to put yourself inside the head of the function as it tries to complete the calculation. The inner monologue might go like this: “I am being asked for the factorial of <em>n</em>. If <em>n</em> = 1, I just return 1, but otherwise don’t know the answer. What I <em>do</em> know is that the factorial of <em>n</em> is equal to <em>n</em> times the factorial of <em>n</em> – 1. So I’ll just ask myself for the factorial of <em>n</em> – 1, multiply whatever comes back by <em>n</em>, and return that result.”</p>
       
 <!--
       
@@ -422,45 +461,10 @@ console.log(factorialRecur(10));
       
       <h4>Graphics</h4>
       
+<p>Credits: Marijn Haverbeke’s splendid CodeMirror project for embedding an editor within a web page. CodeMirror is also the basis of the Brackets editor.</p>
+      
 -->
 
-     
-
-     
-      <p id="footnote-underlines" class="footnote-text">The other notes are more informative than this one, I promise.</p>
-      
-      <p id="footnote-phi" class="footnote-text">The ratio of successive Fibonacci numbers converges to a number called phi, also known as the golden ratio. The numerical value is about 1.618. If you’re into this sort of thing, you might want to try the experiment and see what value the ratio of successive Lucas numbers converges to.</p>
-      
-      <p id="footnote-celsius-answer" class="footnote-text"><code class="language-javascript">function celsius(fahrenheit) { return (fahrenheit - 32) * (100 / 180); }</code></p>
-      
-      <p id="footnote-booleans" class="footnote-text">Named for the 19th-century logician George Boole.</p>
-      
-      <p id="footnote-nonsense" class="footnote-text">The brute-force method is to copy the expression <code class="language-javascript">Math.floor(Math.random() * 7)</code> three times, putting it into each of the array references. A better idea is to define a function—maybe call it <code>random7()</code>—with <code class="language-javascript">return Math.floor(Math.random() * 7)</code> in the body.</p>
-      
-      <p id="footnote-object-keys" class="footnote-text">All the keys in an object are treated as strings, even if they are not wrapped in quotation marks. For example, the key in the object <code class="language-javascript">{pi: 3.142}</code> is really <code class="language-javascript">"pi"</code>, and in <code class="language-javascript">{3.142: "pi"}</code> the key is not the number <code class="language-javascript">3.142</code> but the five-character string <code class="language-javascript">"3.142"</code>. When a key is a string that includes whitespace characters, quotation marks are mandatory: <code class="language-javascript">{"the key": "the value"}</code>. Moreover, with such keys the object’s property values can be accessed only with the array-like notation <code class="language-javascript">obj["the key"]</code>; the dotted form <code class="language-javascript">obj."the key"</code> won’t work.</p>
-    
-      <p id="footnote-declarations" class="footnote-text">If you neglect to declare a variable, JavaScript won’t complain. However, the undeclared variable will have <em>global scope</em>: It will be accessible everywhere in the program, and perhaps even in other JavaScript programs running on the same web page. That’s asking for trouble, since the same variable name could be used elsewhere for another purpose.</p>
-      
-      <p id="footnote-equality" class="footnote-text">The difference between the two equality operators shows up when you compare values that have different data types, such as a number and a string. For example, <code class="language-javascript">0 === "0"</code> returns <code>false</code>, but <code class="language-javascript">0 == "0"</code> returns <code>true</code> because JavaScript converts the string to a number.</p>
-      
-      <p id="footnote-median-hint" class="footnote-text">Try putting the three numbers in an array and applying the <code>.sort()</code> method, then choose the middle one.</p>
-      
-      <p id="footnote-median-answer" class="footnote-text">This function passes the tests for the given numbers, <code>1, 2, 3</code>:<br>
-<code class="language-javascript" style="background-color: white;">function median(x, y, z) {<br>
-  var list = [x, y, z].sort();<br>
-  return list[1];  // note index 1 is second element<br>
-  }</code><br>
-      However, it will not give correct results in other cases because the <code>.sort()</code> method defaults to an alphabetic sorting, where "11" is less than "9", for example. To get sensible results for any numbers, you need to supply <code>.sort()</code> with an ordering function. Here’s one way to do it:<br>
-<code class="language-javascript" style="background-color: white;">function median(x, y, z) {<br>
-  function numericOrder(a, b) { return a - b; }<br>
-  var list = [x, y, z].sort();<br>
-  return list[1];  // note index 1 is second element<br>
-  }</code><br>
-      </p>
-      
-      <p id="footnote-for-loop-index" class="footnote-text">Well, the number of iterations isn’t necessarily fixed. If you fiddle with the index variable in the body of the loop, anything could happen. Not recommended. There is also a <code>break</code> statement that prematurely exits the loop.</p>
-      
-      <p id="footnote-increment" class="footnote-text">In the specific case of adding 1 to a variable, or subtracting 1 from it, there are even shorter cuts: <code>i++</code> and <code>i--</code>, as well as the subtly different <code>++i</code> and <code>--i</code>. </p>
       
 
      
@@ -470,6 +474,7 @@ console.log(factorialRecur(10));
      <script src="js/footnotes.js"></script>
      <script src="js/prism.js"></script>
      <script src="js/codemirror.js"></script>
+     <script src="js/matchbrackets.js"></script>
      <script src="js/javascript.js"></script> <!-- CodeMirror js mode -->
      <script src="js/make-editor.js"></script>
      <script src="js/dla-small.js"></script>

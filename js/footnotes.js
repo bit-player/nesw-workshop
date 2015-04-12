@@ -13,16 +13,22 @@
     var oldOnLoad = window.onload;
     window.onload = function (event) {
         if (document.getElementsByClassName) {
-            var elems = document.getElementsByClassName("footnote-ref");
+            var elems = document.getElementsByClassName("peekaboo-ref");
             for (var i = 0; i<elems.length; i++) {
                 var elem = elems[i];
-                elem.onclick = toggle;
+                elem.onclick = peekaboo;
             }
         }
         if (typeof oldOnLoad === "function") {
             oldOnLoad(event);
         }
     };
+  
+    function peekaboo(ev) {
+      var theId = this.id;
+      var theNote = document.getElementById("note-" + theId);
+      theNote.classList.toggle("shuttered")
+    }
         
     var currentDiv = null;
     var currentId = null;
