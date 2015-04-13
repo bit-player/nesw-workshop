@@ -16,58 +16,37 @@
     margin-right: 1em;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    opacity: 1;
-    -webkit-animation: highlight 1s;
-/*
-    transition: background-color 0.5s linear;
-    transition-delay: 0.5s;
-*/
+    -webkit-animation: highlight 1s linear 0s forwards;
+    animation-name: highlight;
+    animation-delay: 0s;
+    animation-duration: 1s;
+/*    animation: highlight 1s linear 0s forwards;*/
 }
 
-    @-webkit-keyframes highlight {
-      0% {
-        border-color: #d88e44;
-        background-color: #faf8e4;
-      }
-      100% {
-        border-color: #cccccc;
-        background-color: #ffffff;
-      }
-    }
-/*
-    highlight {
-      -webkit-animation: highlight 1s;
-    }
-*/
+@-webkit-keyframes highlight {
+  0% {
+    border-color: #d88e44;
+    background-color: #cccccc;
+  }
+  100% {
+    border-color: #cccccc;
+    background-color: #ffffff;
+  }
+}
 
+@keyframes highlight {
+  0% {
+    border-color: #d88e44;
+    background-color: #cccccc;
+  }
+  100% {
+    border-color: #cccccc;
+    background-color: #ffffff;
+  }
+}
 
 .shuttered {
     display: none;
-/*    background-color: #d88b8b;*/
-/*    transition: background-color 0.5s linear;*/
 }
 
 
-.footnote-tooltip {
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
-    border-radius: 10px;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    padding-left: 1em;
-    padding-right: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    opacity: 0;
-	-webkit-transition: opacity 0.5s linear;
-	-moz-transition: opacity 0.5s linear;
-	-o-transition: opacity 0.5s linear;
-	-ms-transition: opacity 0.5s linear;
-	transition: opacity 0.5s linear;
-}
-
-.footnote-text {
-  display: none;
-}

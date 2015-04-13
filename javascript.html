@@ -453,17 +453,55 @@ console.log(factorialRecur(10));
      
       <p>This time there’s no explicit looping structure in evidence—no <code>for</code>, no <code>while</code>. Instead, there’s an <code>if</code> statement, and a call to the very function we are in the midst of defining. One way to understand what’s going on here is to put yourself inside the head of the function as it tries to complete the calculation. The inner monologue might go like this: “I am being asked for the factorial of <em>n</em>. If <em>n</em> = 1, I just return 1, but otherwise don’t know the answer. What I <em>do</em> know is that the factorial of <em>n</em> is equal to <em>n</em> times the factorial of <em>n</em> – 1. So I’ll just ask myself for the factorial of <em>n</em> – 1, multiply whatever comes back by <em>n</em>, and return that result.”</p>
       
-<!--
       
       <h4>Scripting the Web</h4>
       
+      <p>So far, we’ve been writing code whose only way of talking back to us is by posting messages to the console. That’s a useful protocol for learning the language and for testing and debugging, but it’s not how most JavaScript programs behave. Instead, they create or manipulate elements of the web page in which they are embedded. Here’s a trivial example, just to illustrate how JavaScript is able to grab hold of web page content and change its appearance. When you click the <code class="button">Run</code> button for the function below, all the subheadings in this page turn bright blue. (Click again to restore the original gray color.)</p>
       
+<textarea class="cm">
+function blueheds() {
+  subheds = document.getElementsByTagName("h4");
+  for (var i = 0; i &lt; subheds.length; i++) {
+    if (subheds[i].style.color === "blue") {
+      subheds[i].removeAttribute("style");
+    }
+    else {
+      subheds[i].style.color = "blue";
+    }
+  }
+}
+
+blueheds();
+</textarea>
       
+      <p>To understand what’s going on here, you need to know not just JavaScript but also the other languages that go into making things on the Web: HTML, or Hypertext Markup Language, and CSS, or Cascading Style Sheets. (Three languages just to put a splash of color on the screen! Yes, it’s a bit much.)</p>
+      
+      <p>Since we won’t be needing the JavaScript console just now, we can use the space it occupies on the screen for another purpose—to examine the HTML source code of this web page. Put your mouse pointer on the subhead “Scripting the Web” and <span class="peekaboo-ref" id="right-click">right-click</span>; in the drop-down menu, find and select the item “Inspect Element.” A new panel will open, showing the HTML source code with the subheading highlighted. It will look like this:</p>
+      
+      <p id="note-right-click" class="peekaboo-note shuttered">This should work in all of the major browsers, although the detailed layout of the resulting display will differ. If you’re on a Macintosh with a one-button mouse, Option-click. With a trackpad, a two-fingered tap may do it. There are also menu commands to open the inspector.</p>
+      
+      <p><code class="language-markup">&lt;h4&gt;Scripting the Web&lt;/h4&gt;</code></p>
+      
+      <p>Or maybe like this, if you have run the <code>bluheds</code> program an odd number of times:</p>
+      
+      <p><code class="language-markup">&lt;h4 style="color: blue"&gt;Scripting the Web&lt;/h4&gt;</code></p>
+      
+      <p>If you now press the <code class="button">Run</code> button a few times more, you’ll see exactly what the <code>bluheds</code> function is doing. It inserts and removes a <code>style="color: blue"</code> annotation within the <code>&lt;h4&gt;</code> <span class="peekaboo-ref" id="HTML-tags">HTML tag</span>.</p>
+      
+      <p id="note-HTML-tags" class="peekaboo-note shuttered">HTML tags, characteristically enclosed in angle brackets, label the elements of an HTML document. <code>&lt;h4&gt;</code> is a level-four heading, <code>&lt;p&gt;</code> is a paragraph, and so on. Almost all of them require a matched closing tag, such as <code>&lt;/p&gt;</code></p> 
+      
+      <p>Let’s go through the function line by line. The <code>document.getElementsByTagName("h4")</code> method sifts through the entire web page and compiles a list of all elements tagged <code>&lt;h4&gt;</code>; the list, packaged as a special kind of array, is assigned to the variable <code>subheds</code>. The <code>for</code> loop steps through the array and examines each <code>&lt;h4&gt;</code> element in turn. If the element already has a <code>style</code> attribute specifying <code>color: "blue"</code>, the <code>removeAttribute</code> method is invoked. It does just what the name suggests, <span class="peekaboo-ref" id="removal">removing</span> the entire <code>style</code> attribute from the <code>&lt;h4&gt;</code> element. Otherwise, a new <code>style.color = "blue"</code> attribute is added to the element. The browser does the rest, reading the attributes of each element and displaying it appropriately.</p>
+      
+      <p id="note-removal" class="peekaboo-note shuttered">Removing the entire attribute is not really the best way to do this. The element might have other styles applied, and bluheds would clobber them all. A better strategy is to add and remove a <code>class</code> attribute, such as <code>class="blue"</code>, and then put the styling information in a separate CSS file.</p>
+      
+      <p>The basic strategy employed by the <code>bluheds</code> function is a very common one in JavaScript programs. First you gather together all the HTML elements you want to work with, and store pointers to them in a JavaScript variable. Then you act on the elements one by one. You can also create new elements or delete existing ones. It’s a pretty simple recipe, but with a computer that can chomp through many thousands of elements per second, it can achieve some stunning visual effects.</p>
+
       <h4>Graphics</h4>
       
-<p>Credits: Marijn Haverbeke’s splendid CodeMirror project for embedding an editor within a web page. CodeMirror is also the basis of the Brackets editor.</p>
+      <p>[TK]</p>
       
--->
+<!--<p>Credits: Marijn Haverbeke’s splendid CodeMirror project for embedding an editor within a web page. CodeMirror is also the basis of the Brackets editor.</p>-->
+      
 
       
 
