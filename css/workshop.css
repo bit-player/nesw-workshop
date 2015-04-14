@@ -196,3 +196,17 @@ button#dla-run {
   display: block;
   margin: 0 auto;
 }
+
+#bubbles-div {
+  position: relative;
+  width: 100%;
+}
+
+#bubbles-canvas {
+  display: block;
+  width: 500px;
+  margin: 10px auto 10px auto;
+  border: 1px solid #a0a0a0;
+}
+
+
