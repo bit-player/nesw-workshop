@@ -97,3 +97,9 @@ div#header h5 {
   display: block;
   margin: 10px auto;
 }
+
+#the-slider {
+  display: block;
+  width: 250px;
+  margin: 10px auto;
+}

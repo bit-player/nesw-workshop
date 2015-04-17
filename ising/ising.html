@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Ising Model in JS</title>
+    <meta name="author" content="Brian Hayes">
+
+    <link rel="stylesheet" href="ising.css">
+
+  </head>
+  
+  <body>
+   
+    <div id="content">
+     
+      <div id="header">
+        <h3>NESW Workshop</h3>
+        <h3>Telling Science Stories with Code and Data</h3>   
+      </div>
+      
+      <h2>JavaScript Magnetism</h2>
+      
+      <div id="the-viz">
+        <canvas id="the-canvas" width="500px" height="500px"></canvas>
+        <input id="the-slider" type="range" min="0.001" max="50.0" step="0.01" value="3.0">
+        <button id="the-button">Start</button>
+      </div>
+
+      <p>A material becomes magnetized when a majority of its atomic spins line up in parallel. Iron and a few other substances (<em>ferromagnets</em>) spontaneously magnetize, but only below a threshold temperature. Here the two possible spin directions are represented by different colors. At high temperature they mix randomly, but with cooling large blocks of uniform color begin to appear.</p>      
+
+      </div>  <!-- end of content-->
+        
+    <script src="ising.js"></script>
+  </body>
+</html>
