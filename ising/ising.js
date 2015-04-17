@@ -13,8 +13,8 @@
   var theButton = document.getElementById("the-button");
   theButton.onclick = doButton;
   var theSlider = document.getElementById("the-slider");
-  theSlider.onchange = adjustTemp(this.value);
-  theSlider.oninput = adjustTemp(this.value);
+  theSlider.onchange = adjustTemp;
+  theSlider.oninput = adjustTemp;
 
   var gridSize = 100,
       gridEdge = gridSize - 1,
@@ -22,7 +22,8 @@
       state = 'paused',
       upColor = "#d88e44",
       downColor = "#412ac1",
-      temp = Number(theSlider.value);
+      temp = Number(theSlider.value),
+      timer;
     
   
   // build the array of cells
@@ -34,7 +35,6 @@
 
   function init() {
     var i, j;
-    console.log("initing");
     state = 'scrambled';
     for (i = 0; i < gridSize; i++) {
       for (j = 0; j < gridSize; j++) {
@@ -59,7 +59,7 @@
   }
   
   function updateRandomCell() {
-    var x, y, north, south, east, west, temp, deltaE;
+    var x, y, north, south, east, west, deltaE;
     x = Math.floor(Math.random() * gridSize);
     y = Math.floor(Math.random() * gridSize);
     north = lattice[x][(y > 0) ? y - 1 : gridEdge];
@@ -68,28 +68,35 @@
     west  = lattice[(x < gridEdge) ? x + 1 : 0][y];
     deltaE = 2 * lattice[x][y] * (north + south + east + west);
     if ((deltaE <= 0) || Math.random() < Math.exp(-deltaE/temp)) {
-      lattice.[x][y] *= -1;
+      lattice[x][y] *= -1;
       markSpin(x, y);
     }
   }
-  
-  function run() {
-    while (state === 'running') {
-      
-    }
-    }
     
+  function runBatch() {
+    for (i = 0; i < 1000; i++) {
+      updateRandomCell();
+    }
   }
   
   function doButton(e) {
-    console.log("buttoning")
+    if (state !== 'running') {
+      state = 'running';
+      this.innerHTML = "Stop";
+      timer = setInterval(runBatch, 1);
+    }
+    else {
+      state = 'paused';
+      clearInterval(timer);
+      this.innerHTML = "Go";
+    }
   }
+
   
-  function adjustTemp(t) {
-    temp = t;
+  function adjustTemp(e) {
+    temp = this.value;
   }
   
   init();
-  run();
 
 })();
