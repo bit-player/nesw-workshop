@@ -2,6 +2,8 @@
   The Ising model of ferromagnetism. 
   Brian Hayes
   2015-04-17
+  Inspired by code from Dan Schroeder, Weber State University;
+  see http://physics.weber.edu/schroeder/software/demos/IsingModel.html
 */
 
 (function() {
