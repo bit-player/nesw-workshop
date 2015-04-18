@@ -199,15 +199,15 @@
   // build the array of cells
   
   var lattice = new Array(gridSize);
-  for (var i = 0; i < gridSize; i++) {
+  for (var i = 0; i &lt; gridSize; i++) {
       lattice[i] = new Array(gridSize);
   }
 
   function init() {
     var i, j;
     state = 'scrambled';
-    for (i = 0; i < gridSize; i++) {
-      for (j = 0; j < gridSize; j++) {
+    for (i = 0; i &lt; gridSize; i++) {
+      for (j = 0; j &lt; gridSize; j++) {
         if (coinFlip()) {
           lattice[i][j] = 1;
         }
@@ -220,7 +220,7 @@
   }
 
   function coinFlip() {
-    return Math.random() < 0.5;
+    return Math.random() &lt; 0.5;
   }
   
   function markSpin(i, j) {
@@ -233,18 +233,18 @@
     x = Math.floor(Math.random() * gridSize);
     y = Math.floor(Math.random() * gridSize);
     north = lattice[x][(y > 0) ? y - 1 : gridEdge];
-    south = lattice[x][(y < gridEdge) ? y + 1 : 0];
+    south = lattice[x][(y &lt; gridEdge) ? y + 1 : 0];
     east  = lattice[(x > 0) ? x - 1 : gridEdge][y];
-    west  = lattice[(x < gridEdge) ? x + 1 : 0][y];
+    west  = lattice[(x &lt; gridEdge) ? x + 1 : 0][y];
     deltaE = 2 * lattice[x][y] * (north + south + east + west);
-    if ((deltaE <= 0) || Math.random() < Math.exp(-deltaE/temp)) {
+    if ((deltaE &lt= 0) || Math.random() &lt; Math.exp(-deltaE/temp)) {
       lattice[x][y] *= -1;
       markSpin(x, y);
     }
   }
     
   function runBatch() {
-    for (i = 0; i < 1000; i++) {
+    for (i = 0; i &lt; 1000; i++) {
       updateRandomCell();
     }
   }
@@ -272,6 +272,20 @@
 })();
 </code></pre>
         </section>
+        
+        <section>
+          <h2>Why Now?</h2>
+          <ul>
+            <li>Better hardware.</li>
+            <li>Better software.</li>
+            <li>Better standards.</li>
+            <li>Better programming tools.</li>
+            <li>The Internet.</li>
+            <li>Readers expect more.</li>
+          </ul>
+        </section>
+
+
 
       </div>
 
