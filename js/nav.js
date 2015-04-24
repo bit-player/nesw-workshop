@@ -4,7 +4,6 @@
         [
           ["Home", "index.html"],
           ["Instructions", "instructions.html"],
-          ["Schedule", "schedule.html"],
           ["Examples", "examples.html"],
           ["Resources", "resources.html"],
           ["Python", "python.html"],
