@@ -182,7 +182,7 @@ body {
  *********************************************/
 .reveal a {
   color: #51483D;
-  text-decoration: none;
+  text-decoration: underline;              /*  for published version  */
   -webkit-transition: color 0.15s ease;
   -moz-transition: color 0.15s ease;
   transition: color 0.15s ease; }

@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>For Workshop Participants</title>
+    <title>Software Tools</title>
     <meta name="author" content="Brian Hayes">
 
     <link rel="stylesheet" href="css/workshop.css">
@@ -19,44 +19,13 @@
       </div>
       <div id="nav"></div>
 
-      <h2>Instructions for Participants</h2>
+      <h2>Software You’ll Need</h2>
       
-      <p>Our workshop will be a hands-on event. You’ll be writing, testing, and debugging your own programs on your own computer. At the end of the day, we want you to go home with a completed project that works. To make all this happen, you’ll need to do some advance preparation. In particular, it’s important that everyone arrive on Saturday morning with the necessary software already installed and working.</p>
-      
-      <p>Don’t be put off by the length of these instructions. The process is not really complicated, but we’ve spelled things out in detail just to be sure no one gets lost along the way.</p>
-
-      <h4>What to Bring</h4>
-      
-      <p>You will need a reasonably modern laptop computer, with working wifi, an up-to-date web browser, and about a gigabyte of available space on the disk drive for the software we’re about to install. Also helpful is a Dropbox account for sharing files with the members of your group and uploading them to the workshop website.</p>
-      
-      <ul>
-        <li>Windows computers should be running Windows Vista or later (version 7, 8, or 8.1).</li>
-        <li>Macintosh computers need OS X version 10.6.8 (Snow Leopard) or later.</li>
-        <li>What about Linux? Should work, but we’re not giving step-by-step instructions.</li>
-        <li>Google Chrome is the recommended web browser, but Firefox or Safari should work in a pinch. If you prefer Internet Explorer, please make sure it’s the latest version.</li>
-        <li>If you don’t have a Dropbox account, you can <a href="https://www.dropbox.com/">sign up for a free account</a>, which comes with 2 gigabytes of storage.</li>
-        <li>Installing the programming-language software will fill up about 1.1 gigabytes (1100 megabytes) of free disk space, and you’ll briefly need even more than that during the down-load-and-install process. If you are short of disk space, please see the <a href="#squeezing">note below</a>. All of the software can easily be removed after the workshop, if you need to recover the space used.</li>
-      </ul>
-      
-      <p>Don’t forget to bring your power cord and charger!</p>
-
-      <h4>Security Questions</h4>
-      
-      <p>The Internet is a rough neighborhood. We’re urging you to install gobs of software from sources you’ve probably never heard of. Is that safe?</p>
-      
-      <p>There are certainly no guarantees, but the specific software recommended here is in use by many thousands of programmers, who are well qualified to detect anything fishy going on behind the scenes. Within this social milieu, having access to the source code is generally considered a better certificate of integrity than relying on approval from Apple or Microsoft.</p>
-      
-      <p>At some stages of the installation process, you may see warnings about the risks of downloaded software. Your browser might display a message saying “This kind of file could harm your computer.” And recent versions of the Macintosh operating system are configured by default to allow only software from the Apple store and other “trusted developers.” You will have to override or turn off these warnings (see Apple’s instructions <a href="https://support.apple.com/en-us/HT202491">here</a>).</p>
-      
-      <p>Another point to keep in mind is that we ourselves are “untrusted developers.” We’ll be playing with sharp tools that have the power to wreak havoc, say by deleting all the files on your hard disk. Such catastrophes are extremely unlikely, unless you deliberately set out to commit mischief, but it’s worth keeping in mind that we are playing outside the sandbox.</p>
-      
+      <p>If you want to follow along with the workshop curriculum, you will need a reasonably modern computer with an up-to-date web browser and about a gigabyte of available space on the disk drive for newly installed software. (All of the software can easily be removed later, if you need to recover the disk space.)</p>
       
       <h4>Installing Python</h4>
       
-      <p>In the workshop we’ll be exploring two programming ecosystems: Python for data analysis and JavaScript for building interactive storytelling aids. But there is overlap between these two worlds, and we encourage everyone to set up a working environment for both.
-      Let’s start with Python.</p>
-       
-      <p>Even if you already have a version of Python on your machine, we suggest installing the Anaconda distribution from Continuum Analytics and using it for the workshop. It won’t interfere with your existing setup, and you can remove it later with no fuss.</p>
+      <p>Even if you already have a version of Python on your machine, we suggest installing the Anaconda distribution from Continuum Analytics. It won’t interfere with your existing setup, and you can remove it later with no fuss.</p>
       
       <ul>
         <li>Go to <a href="http://continuum.io/downloads" target="_blank">http://continuum.io/downloads/</a>. You should be offered an installer tailored to your operating system.
@@ -77,12 +46,10 @@
         
         <li>If all goes well, you’ll get a message saying the installation was successful.</li>
         
-        <li>And what if all <em>doesn’t</em> go well? You might find a LiveChat icon on the <a href="http://docs.continuum.io/anaconda/index.html#installation-instructions">Continuum.io install page</a>. There’s a <a href="http://docs.continuum.io/anaconda/faq.html">FAQ</a>. There’s an <a href="https://github.com/ContinuumIO/anaconda-issues/issues">Anaconda Issues</a> page on GitHub. There’s a <a href="https://groups.google.com/a/continuum.io/forum/?fromgroups#!forum/anaconda">Google Group</a> where you can ask for help. Or get in touch with us—the workshop organizers.</li>
+        <li>And what if all <em>doesn’t</em> go well? You might find a LiveChat icon on the <a href="http://docs.continuum.io/anaconda/index.html#installation-instructions">Continuum.io install page</a>. There’s a <a href="http://docs.continuum.io/anaconda/faq.html">FAQ</a>. There’s an <a href="https://github.com/ContinuumIO/anaconda-issues/issues">Anaconda Issues</a> page on GitHub. There’s a <a href="https://groups.google.com/a/continuum.io/forum/?fromgroups#!forum/anaconda">Google Group</a> where you can ask for help.</li>
         
         <li>Once you’ve completed the installation, you can throw away the installer (the <code>.pkg</code> or <code>.exe</code> file).</li>
       </ul>
-      
-      <p>Note: On March 31, Continuum Analytics released a major upgrade to Anaconda Python. If you downloaded the package before then, please see the instructions for updating under <a href="#command-line">Command Performance</a> below.</p>
       
       <h4>Trying Out Python and IPython Notebook</h4>
       
@@ -91,7 +58,7 @@
       <ul>
         <li>On Macintosh, open the new “anaconda” folder. Among the files and folders inside, you’ll find one called “Launcher” or “Launcher.app”; double click it. On Windows, Launcher will be found in the Start menu.</li>
         <li>After a few seconds, a list of launchable programs should appear; find the one labeled “ipython-notebook.” Click the dark blue “Launch” button (not the “Update” button, if there is one).</li>
-        <li>A Terminal window may appear briefly, then your web browser should launch; if the browser is already running, a new window or tab will open up. The banner at the top of the window will say “Jupyter.” This is going to be the new name of IPython notebook, although at the moment both names coexist.</li>
+        <li>A Terminal window may appear briefly, then your web browser should launch; if the browser is already running, a new window or tab will open up. The banner at the top of the window will say “Jupyter.”</li>
         <li>In the Jupyter/IPython window you’ll see a list of files and folders, and near the upper right corner a “New” button. Clicking on “New” reveals a short menu; choose the “Python2” item.</li>
         <li>Yet another tab or window should now open in the browser. At last you have reached the promised land of the notebook! This is where you have a conversation with the Python interpreter. You write a Python expression in a box that has an <code class="button">In&nbsp;[&nbsp;]:</code> prompt; the interpreter replies in an <code class="button">Out&nbsp;[&nbsp;]:</code> box. Of course it’s not so easy to write a Python expression if you don’t know any Python. Let us resort to mathematics, the universal language. Type in a simple addition or multiplication problem, then press <code>Alt-Enter</code> (or <code>Opt-Enter</code> on Macintosh):
         <img src="img/ipython-notebook-cell-500px.png" width="500" height="218"></li>
@@ -123,67 +90,6 @@
       <p>When you’re ready to start exploring JavaScript programming, take a look at <a href="javascript.html">JavaScript in a Jiffy</a>.</p>
       
       
-      <h4 id="command-line">Command Performance</h4>
-      
-      <p>All of the procedures described above are done with the familiar point-and-click interface of modern computers. Many programmers would choose to perform the same tasks from the command line. If you are not accustomed to command-line operations, it’s worth spending a few minutes to get acquainted. On a Macintosh, you run the Terminal program, which is generally installed in the Utilities folder. On Windows, Command Prompt is found via Start > All Programs > Accessories.</p>
-      
-      <p>Here is a terminal session for launching an IPython notebook. Typed input is shown in color; prompts and system output are in black. The command <code>pwd</code> prints the current working directory, and <code>cd</code> changes the directory. (The “user$” prompt will be different on your machine.)</p>
-           
-      <pre class="terminal">
-Last login: Sun Mar 29 16:42:25 on ttys005
-user$ <span class="terminal-input">pwd</span>
-/Users/user
-user$ <span class="terminal-input">cd ~/GitHub/nesw-workshop</span>
-nesw-workshop user$ <span class="terminal-input">ipython notebook</span>
-[I 16:45:18.795 NotebookApp] Serving notebooks from local directory: /Users/user/GitHub/nesw-workshop
-[I 16:45:18.795 NotebookApp] The IPython Notebook is running at: http://localhost:8890/
-</pre>
-     
-      <p>Launching IPython from the command line—rather than using the Launcher application—has its advantages. In particular, it allows you to specify the directory where files will be saved.</p>
-      
-      <p>If you have an older version of the Anaconda Python package (downloaded before April 1, 2015), you can update it by issuing a few simple commands. The abbreviated transcript below shows how it’s done; again, user inputs are in red.</p>
-      
-<pre class="terminal">
-user$ <span class="terminal-input">conda update conda</span>
-Fetching package metadata: ....
-Solving package specifications: .
-Package plan for installation in environment /Applications/programming/Python/anaconda:
-.
-.
-.
-Proceed ([y]/n)? <span class="terminal-input">y</span>
-
-Fetching packages ...
-.
-.
-.
-user$ <span class="terminal-input">conda update anaconda</span>
-Fetching package metadata: ....
-Solving package specifications: .
-The following packages will be downloaded:
-.
-.
-.
-Proceed ([y]/n)? <span class="terminal-input">y</span>
-
-Fetching packages ...
-.
-.
-.
-user$ <span class="terminal-input">ipython notebook</span>
-</pre>
-
-      
-      <p>For a quick introduction to terminal commands in OS X and other varieties of Unix, try the <a href="http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line">Treehouse blog</a>. Princeton has a <a href="http://www.cs.princeton.edu/courses/archive/spr05/cos126/cmd-prompt.html">guide</a> to the Windows command prompt.</p>
-      
-      
-      <h4 id="squeezing">Short of Disk Space?</h4>
-      
-      <p>If all this stuff just won’t fit, the first option to consider is <a href="http://conda.pydata.org/miniconda.html">Miniconda</a>. This is a version of the Anaconda installer that includes only Python itself and the conda package manager, with none of the 200 other packages. The trouble is, those packages include most of the goodies that make Python useful and fun. You can install them separately as needed, but unless you’re very selective you may again run into disk-space constraints.</p>
-      
-      <p>A few services allow you to run Python and IPython “in the cloud”—that is, on someone else’s hardware. The Anaconda folks have a version of this idea called <a href="https://wakari.io/">Wakari</a>. Another implementation is called the <a href="tmpnb.org">Temporary Notebook Service</a>. But what you get for free with these services is necessarily limited. The Temporary Notebooks, for example, are truly temporary: Everything you’ve done disappears after 10 minutes of inactivity.</p>
-      
-      <p>What about installing the software on an external hard disk or a thumb drive? Probably not a good solution. The USB interface to an external disk is much slower than the connection to an internal drive, and so performance will be very sluggish. A better use of an external drive is to hold other files that don’t require immediate access, allowing you to clear some space on the main disk.</p>
       
      </div> <!--"content"-->
      <script src="js/nav.js"></script>

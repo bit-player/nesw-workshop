@@ -148,7 +148,8 @@ body {
 
 /** Prevents layering issues in certain browser/transition combinations */
 .reveal a {
-  position: relative; }
+  position: relative; 
+}
 
 .reveal .stretch {
   max-width: none;

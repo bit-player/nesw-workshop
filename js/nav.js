@@ -3,12 +3,12 @@
     var menu = 
         [
           ["Home", "index.html"],
-          ["Instructions", "instructions.html"],
-          ["Examples", "examples.html"],
+          ["Keynotes", "keynotes.html"],
+          ["Software", "instructions.html"],
           ["Resources", "resources.html"],
           ["Python", "python.html"],
           ["JavaScript", "javascript.html"],
-          ["Workspace", "http://salty-wave-5013.herokuapp.com/"]
+          ["Showcase", "showcase.html"]
         ]
     var navList = document.getElementById("nav");
     for (var i = 0; i < menu.length; i++) {
