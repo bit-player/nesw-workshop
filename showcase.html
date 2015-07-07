@@ -85,10 +85,41 @@
       
       <h5>Group members: Karen Miller, Carol Morton, Anna Nowogrodzki, and Tom Ulrich</h5>
       
+      <p>How safe and effective is any given drug? Often, physicians and patients do not really know the answer. Much evidence shows that information is routinely concealed or selectively reported in academic journals. Physicians, patients, policy makers, and health care payers may decide on certain drugs based on incomplete or inaccurate information. Millions of dollars and the health of millions of people are at stake.</p>
+
+      <p>That may be changing. On April 14, 2015, the World Health Organization (WHO) called for all clinical trials of new drugs to publicly post their methods and summary results within one year. For such mandatory reporting, the U.S. ClinicalTrials.gov database has been proposed as a quicker and more reliable registry than academic journals.</p> 
+
+      <p>The first step is to explore the extent to which results from registered clinical trials are publicly disclosed. To carve out a manageable scope, we focused on multiple sclerosis (MS), an inflammatory and neurodegenerative disease of the brain and spinal cord with no cure but with at least a dozen new drugs in the last 20 years.</p>
+
+      <p>The original idea was to compare the studies and available results using two major U.S. databases, ClinicalTrials.gov, an extensive list of clinical trials, and PubMed, an extensive collection of published biomedical studies.</p> 
+
+      <p>Our key questions:</p> 
+
+      <ol>
+        <li>How many completed clinical trials results are made public?</li>
+        <li>How are the results made public – summary results on ClinicalTrials.gov, a published study on PubMed, or both?</li>
+        <li>Funding sources (how does that affect which results are made public?)</li>
+        <li>When are results made public?</li>
+      </ol>
+
+      <p>Online Data Sources:</p>
+      
+      <ul>
+        <li><a href="http://ClinicalTrials.gov">ClinicalTrials.gov</a></li>
+        <li><a href="http://PubMed.gov">PubMed</a></li> 
+        <li><a href="https://neuinfo.org/">Neuroscience Information Framework (NIF)</a></li>
+      </ul>
+
       <h5>Code and data</h5>
       
       <p><a href="https://github.com/bit-player/nesw-workshop/blob/gh-pages/group_3_secret_studies/study_fields.csv.xlsx" download="study_fields.csv.xlsx">Excel spreadsheet</a> with data on published and unpublished clinical trials.</p>
       
+      <p>We found more than 1,321 studies searching under “multiple sclerosis” in ClinicalTrials.gov, at various stages of being open or closed. Of those, 158 were <a href="https://clinicaltrials.gov/ct2/results?term=%22multiple+sclerosis%22&recr=Closed&rslt=With&type=&cond=&intr=&titles=&outc=&spons=&lead=&id=&state1=&cntry1=&state2=&cntry2=&state3=&cntry3=&locn=&gndr=&rcv_s=&rcv_e=&lup_s=&lup_e=">closed studies with results</a>, and 740 studies <a href="https://clinicaltrials.gov/ct2/results?term=%22multiple+sclerosis%22&recr=Closed&rslt=Without&type=&cond=&intr=&titles=&outc=&spons=&lead=&id=&state1=&cntry1=&state2=&cntry2=&state3=&cntry3=&locn=&gndr=&rcv_s=&rcv_e=&lup_s=&lup_e=">were closed with no results</a>. A PubMed search for “multiple sclerosis” narrowed to “clinical trial” article type yielded 3,582 records.</p>
+
+      <p>An attempt to use Python to find publications with clinical trial numbers ran into a problem when Python couldn’t read non-ASCII-encoded characters, such as the trademark symbol, requiring cleaning of the data. It was also difficult to keep track of the data as the coding progressed. Other questions required more reporting, such as if clinical trials numbers are included in all PubMed listings of results and if the analysis should include all categories of closed trials.</p> 
+
+      <p>Moving to a spreadsheet to try visualizing answers to other questions, we analyzed how many results were reported based on industry funding or not. Comparative pie charts were misleading, showing that a higher percentage of industry-funded studies reported results. A stacked bar graph showed that most unreported results come from industry-funded studies, which are the majority of clinical trials.</p> 
+
       <h5>Presentation</h5>
       
       <p><a href="https://github.com/bit-player/nesw-workshop/blob/gh-pages/group_3_secret_studies/Final_presentation.pptx" download="Water3.pptx">Download</a> the Powerpoint slides.</p>
