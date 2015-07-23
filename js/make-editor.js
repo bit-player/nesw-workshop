@@ -25,7 +25,7 @@ function convertToCm() {
     runButton.className = "run-button";
     runButton.cmInstance = cm;
     runButton.onclick = runner;
-    txtAreas[i].parentNode.insertBefore(runButton, txtAreas[i]);
+    txtAreas[i].parentNode.appendChild(runButton);
     
     var resetButton = document.createElement("button");
     resetButton.textContent = "Reset";
@@ -33,7 +33,7 @@ function convertToCm() {
     resetButton.cmInstance = cm;
     resetButton.originalContent = txtAreas[i].textContent;
     resetButton.onclick = resetter;
-    txtAreas[i].parentNode.insertBefore(resetButton, txtAreas[i]);
+    txtAreas[i].parentNode.appendChild(resetButton);
     
   }
 }

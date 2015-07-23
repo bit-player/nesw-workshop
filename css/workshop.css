@@ -89,6 +89,10 @@ code.button {
   border-radius: 5px;
 }
 
+.run-button, .reset-button {
+  margin-top: 3px;
+}
+
 div#nav {
   position: relative;
   margin-top: 20px;
