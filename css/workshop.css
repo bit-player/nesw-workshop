@@ -93,6 +93,25 @@ code.button {
   margin-top: 3px;
 }
 
+.output-div {
+  height: 200px;
+  overflow-y: scroll;
+  margin-top: 10px;
+  border: 1px solid #d88e44;
+}
+
+.hidden {
+  display: none;
+}
+
+.output-div p {
+  font-family: monospace;
+  margin: 0px;
+  line-height: 1.3em;
+  color: #808080;
+  padding-left: 15px;
+}
+
 div#nav {
   position: relative;
   margin-top: 20px;

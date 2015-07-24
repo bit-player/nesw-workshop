@@ -69,7 +69,7 @@
       
       <p>This is what JavaScript looks like in its native habitat:</p>
       
-      <div class="cm-div">
+      <div class="cm-div" id="fibo" data-output-height="200px">
       <textarea class="cm">
 /*
 Compute the nth Fibonacci number. This sequence
@@ -104,9 +104,8 @@ for (var i = 0; i &lt;= 20; i++) {
       
       <p>Give it a try in the editor panel below. I have filled in the tired old greeting that has been a cliché of programming language manuals for almost 40 years. Improve on it! Personalize it. Add some more <code>console.log</code> statements of your own. Try putting other kinds of values in the parentheses—maybe an arithmetic expression such as <code class="language-javascript">6 * 7</code>. Again, press the <code class="button">Run</code> button and make sure the result in the console is what you expected to see.</p>
       
-<div class="cm-div">
+<div class="cm-div" id="hello" data-output-height="50px">
 <textarea class="cm">console.log("Hello, world!");
-
 </textarea>
 </div>      
       
@@ -116,7 +115,7 @@ for (var i = 0; i &lt;= 20; i++) {
       
       <p>Functions are the basic units of discourse in JavaScript, roughly analogous to sentences or paragraphs of English prose. Here are a few one-liners. You can probably guess what they do, but run the code anyway.</p>
             
-<div class="cm-div">
+<div class="cm-div" id="funcs" data-output-height="80px">
 <textarea class="cm">
 function fahrenheit(celsius) { return celsius * (180 / 100) + 32; }
 
@@ -194,7 +193,7 @@ console.log(coinFlip());
            
       <p>Text strings have their own set of operations, most of them implemented as methods belonging to the strings themselves. In the first line below, we create a string and assign it to the variable <code>s</code>. (More on variables and assignments in just a bit.) Then we invoke four of the methods of the string object <code>s</code>. Before running the code, you might record as a comment following the double slash on each line the value that you expect the expression to return.</p>
 
-<div class="cm-div">           
+<div class="cm-div" id="strings" data-output-height="80px">           
 <textarea class="cm">
 var s = "Tangles of string theory."
 console.log(s.toUpperCase());    // 
@@ -227,7 +226,7 @@ console.log(s.split(" "));       //
       
       <p>An array is an <em>ordered</em> collection of items. This is essential to its nature: the items are numbered, counting up from 0. Storing items, retrieving them, or modifying them—it’s all done by the numbers. In the panel below we define two arrays, called <code>nouns</code> and <code>verbs</code>, each with seven elements. Then we can access any element of the arrays with the notation <code>nouns[i]</code> or <code>verbs[i]</code>, where the index <code>i</code> is an integer between 0 and 6. The <code>console.log</code> statement on line 6 selects three items to construct a rudimentary English sentence.</p>
 
-<div class="cm-div">
+<div class="cm-div" id="arrays" data-output-height="80px">
 <textarea class="cm">var nouns = ["the muffin", "children", "sycamores", "zombies", "grumpiness",
 "Big Papi", "spaghetti"];
 var verbs = ["created", "adored", "believed in", "motivated", "confused",
@@ -258,7 +257,7 @@ console.log(nouns[5], verbs[6], nouns[0]);
       
       <p>You can access object properties much as you do array elements, by putting the quoted key in square brackets. There’s also a shortcut “dotted” notation that is used much more often. Try it out (and remember you can edit this and add your own code):</p>
 
-<div class="cm-div">
+<div class="cm-div" id="objs" data-output-height="80px">
 <textarea class="cm">var famousNumbers = {pi: 3.142, phi: 1.618, e: 2.718};
 
 console.log("pi = " + famousNumbers["pi"]);  // array-like syntax
@@ -322,7 +321,7 @@ console.log(famousNumbers);
       
       <p>The usual reason for comparing data elements is to make decisions that control the sequence of events in a program. If <em>x</em> is greater than <em>y</em>, do one thing; if not, do another. In JavaScript this branching process works as follows:</p>
 
-<div class="cm-div">
+<div class="cm-div" id="ifelse" data-output-height="50px">
 <textarea class="cm">
 function difference(x, y) {
   if (x > y) {          // predicate
@@ -353,7 +352,7 @@ console.log(difference(7, 15));
       
       <p id="note-for-loop-index" class="peekaboo-note shuttered">Well, the number of iterations isn’t necessarily fixed. If you fiddle with the index variable in the body of the loop, anything could happen. Not recommended. There is also a <code>break</code> statement that prematurely exits the loop.</p>
 
-<div class="cm-div">
+<div class="cm-div" id="loops" data-output-height="50px">
 <textarea class="cm">
 function factorialFor(n) {
   var result = 1, i;
@@ -383,7 +382,7 @@ for (i = 1; i &lt;= n; i = i + 1) {
       
        <p>A <code>while</code> loop keeps repeating a block of statements until some stated condition is no longer true. In the code below, the controlling condition is <code>(n &gt;= 0)</code>. In the body of the <code>while</code> loop, we multiply <code>result</code> by the current value of <code>n</code>. The output of the function is identical to that of the <code>for</code>-loop version above. But if you put a <code>console.log()</code> statement inside the loop, you’ll see that the computation takes a different path to that answer.</p>
 
-<div class="cm-div">
+<div class="cm-div" id="while" data-output-height="50px">
 <textarea class="cm">
 function factorialWhile(n) {
   var result = 1;
@@ -400,7 +399,7 @@ console.log(factorialWhile(10))
            
       <p>The <code>for</code> and <code>while</code> loops look different on the page, but they are hardly distinguishable at a deeper level. The choice is often a matter of taste or temperament. Still another way of getting the same answer really is different. The process is known as recursion.</p>
 
-<div class="cm-div">            
+<div class="cm-div" id="recur" data-output-height="50px">            
 <textarea class="cm">
 function factorialRecur(n) {
   if (n &lt;= 1) {
@@ -422,7 +421,7 @@ console.log(factorialRecur(10));
       
       <p>So far, we’ve been writing code whose only way of talking back to us is by posting messages to the console. That’s a useful protocol for learning the language and for testing and debugging, but it’s not how most JavaScript programs behave. Instead, they create or manipulate elements of the web page in which they are embedded. Here’s a trivial example, just to illustrate how JavaScript is able to grab hold of web page content and change its appearance. When you click the <code class="button">Run</code> button for the function below, all the subheadings in this page turn bright blue. (Click again to restore the original gray color.)</p>
 
-<div class="cm-div">      
+<div class="cm-div" id="bluhed" data-output-height="50px">      
 <textarea class="cm">
 function blueheds() {
   subheds = document.getElementsByTagName("h4");
@@ -466,13 +465,7 @@ blueheds();
       
       <p>For scientific visualizations, you need more than multicolor subheads. You need graphics: the ability to draw or paint on the screen. JavaScript has access to two graphics systems within the browser, called the <code>canvas</code> element and Scalable Vector Graphics, or SVG. Although they work quite differently, for many purposes they can produce similar results. On a canvas you draw by invoking methods such as <code>arc()</code> or <code>line()</code>, which paint the appropriate pixels. Once such an object has been drawn, you can no longer move it or change it or even erase it. You can only paint a new object over it. SVG constructs a drawing from persistent graphical objects, closely analogous to the elements of an HTML document. You can move them around or alter their properties, and the displayed drawing will change to match. SVG is more versatile but also more complicated. Here we’re going to construct an elementary demo of drawing on the canvas.</p>
 
-      <div id="bubbles-div">
-        <canvas id="bubbles-canvas" width="500px" height="275px"></canvas>
-      </div>
-      
-      <p>The rectangle above is a blank canvas. If you do an <code>Inspect Element</code> on it, you’ll find it has an <code>id</code> of <code>bubbles-canvas</code>. The canvas is blank because we haven’t yet drawn anything in it. Press the <code class="button">Run</code> button on the code panel below to fix that.</p>
-
-<div class="cm-div">
+<div class="cm-div" id="bubbles" data-output-height="50px">
 <textarea class="cm">
 function bubbles(n) {
 
@@ -518,6 +511,12 @@ bubbles(50);      // draw 50 bubbles
 </textarea>
 </div>
           
+      <div id="bubbles-div">
+        <canvas id="bubbles-canvas" width="500px" height="275px"></canvas>
+      </div>
+      
+      <p>The rectangle above is a blank canvas. If you do an <code>Inspect Element</code> on it, you’ll find it has an <code>id</code> of <code>bubbles-canvas</code>. The canvas is blank because we haven’t yet drawn anything in it. Press the <code class="button">Run</code> button to fix that.</p>
+
       <p>How does it work? The comments in the code will explain much, but I’d like to call attention to a few more points.</p>
       
       <ul>
