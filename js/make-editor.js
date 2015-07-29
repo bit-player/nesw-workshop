@@ -109,7 +109,6 @@ function format(item) {
         str = str.slice(0, str.length - 2);
         str += "}";
       }
-//      console.log("in else", str);
       return str;
     }
   }

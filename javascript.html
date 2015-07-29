@@ -31,7 +31,7 @@
       
       <p>These computational aids to storytelling open up a whole new channel of communication, a new way of presenting data or explaining ideas. They are especially useful in science writing, where we often have intellectually challenging material to get across. Consider the <a href="http://vizhub.healthdata.org/us-health-map/">U.S. Health Map</a>, which distills data on more than 3,000 U.S. counties into a form that allows you to step back and see overall patterns or drill down for the details. Or take the <a href="http://cliffcrosland.tumblr.com/post/115981256393/black-hole-js">JavaScript Black Hole</a>, which vividly illustrates the concept of gravitational lensing in astronomy.</p> 
       
-      <p>The <a href="examples.html">Examples</a> page of this website lists several other impressive works in JavaScript (look under the headings Dava Viz and Simulations and Interactive Presentations). Most of those illustrations were created by virtuoso programmers with long experience and deep expertise. A one-day workshop will not bring you up to that level. But it <em>is</em> entirely possible for an amateur to construct engaging and useful web “interactives” that help explain ideas in the sciences. Here’s one of mine:</p> 
+      <p>The <a href="resources.html">Resources</a> page of this website lists several other impressive works in JavaScript (look under the headings Dava Viz and Simulations and Interactive Presentations). Most of those illustrations were created by virtuoso programmers with long experience and deep expertise. A one-day workshop will not bring you up to that level. But it <em>is</em> entirely possible for an amateur to construct engaging and useful web “interactives” that help explain ideas in the sciences. Here’s one of mine:</p> 
       
       <div id="dla-banner-div"><canvas id="dla-banner-canvas" width="500px" height="275px"></canvas></div>
       <button id="dla-run" onclick="dlaBanner.animate()">Run</button>
@@ -43,21 +43,9 @@
       <ul>
         <li>Please open this document in a reasonably up-to-date web browser. Recent versions of Google Chrome or Firefox are ideal; Safari and Opera are also fine. The latest Internet Explorer (IE11) should also work, but I haven’t been able to test it.</li>
         
-        <li>For most of the exercises below, you’ll need to use your browser’s developer tools—specifically the JavaScript console—which is where outputs and error messages will appear.</li>
+        <li>Throughout this tutorial, every panel with a butter-colored background and an orange border is a live JavaScript playground. The <code class="button">Run</code> button just below the panel will run the code. You can edit the code in the panel and run it again, as often as you wish. The panel will grow as needed when you type more lines of code.</li>
         
-        <ul>
-          <li>In Chrome, the menu item is View > Developer > JavaScript Console. (<a href="https://developer.chrome.com/devtools">More info.</a>)</li>
-          
-          <li>In Firefox: Tools > Web Developer > Web Console. (<a href="https://developer.mozilla.org/en-US/docs/Tools">More info.</a>)</li>
-          
-          <li>In Safari, first open Preferences, find the Advanced tab, tick the box labeled “Show Develop Menu in Menu Bar.” Now, under the new Develop menu, choose “Show Error Console.” (<a href="https://developer.apple.com/safari/tools/">More info.</a>)</li>
-          
-          <li>In Internet Explorer 11, press F12 to open the Tools window, then select the Console tab. (<a href="https://msdn.microsoft.com/library/ie/bg182326(v=vs.85)">More info.</a>)</li>
-          
-        </ul>
-        <li>You can adjust the size and location of the JavaScript console. When screen space is tight, I like to anchor the console to the right edge of the browser window.</li>
-        
-        <li>Throughout this tutorial, every panel with a butter-colored background and an orange border is a live JavaScript playground. The <code class="button">Run</code> button just above the panel will run the code. You can edit the code in the panel and run it again, as often as you wish. The panel will grow as needed when you type more lines of code.</li>
+        <li>Most of the programs produce textual output, using the browser’s <code>console.log</code> command. Ordinarily, such output is visible only when you open the browser’s developer tools (specifically the JavaScript console). Early readers found this process cumbersome and confusing, so this version of the tutorial shows the output directly in the page itself. (But the same output still goes to the console, if you'd rather look at it there. Also, should you have a bug in your program, any error messages will appear only in the console.) </li>
         
         <li><span class="peekaboo-ref" id="underlines">Underlined text</span> in this tutorial signals the presence of a peekaboo note: click to reveal it, then click again to hide it. Most of the notes elaborate on gnarly technical details, and there’s no harm in skipping them if you can suppress your curiosity.</li>
         
@@ -88,21 +76,21 @@ function fib(n) {
   return a;
 }
 
-for (var i = 0; i &lt;= 20; i++) {
-  console.log(i, fib(i));
+for (var n = 0; n &lt;= 20; n++) {
+  console.log("fib(", n, ") = ", fib(n));
 }
 </textarea>
      </div>
       
-      <p>You may not fully understand the program above—and if you do, you might as well skip the rest of this tutorial—but you can play with it anyway. Go ahead and run the program. With your JavaScript console open, press the <code class="button">Run</code> button and you’ll see the program’s output in the console. Try editing the code, and then run it again to see the effect of your changes. For example, in line 18 you might change <code class="language-javascript">i &lt;= 20</code> to <code class="language-javascript">i &lt;= 50</code> to see some larger Fibonacci numbers. Or make line 9 read <code class="language-javascript">var a = 2, b = 1, tmp;</code> to generate a slightly less famous sequence known as the Lucas numbers. Another <span class="peekaboo-ref" id="phi">experiment worth trying:</span> Change line 15 to <code class="language-javascript">return b / a;</code>. Or just go wild—modify the code in anyway you want, or replace if with your own program. If you ever want to get back to the original state of the code, that’s what the <code class="button">Reset</code> button is for. You can also clear the list of past outputs in the console window, although the command for doing so differs from browser to browser.</p>
+      <p>You may not fully understand the program above, but you can play with it anyway. Go ahead and press the <code class="button">Run</code> button and you’ll see the program’s output in a new panel. Try editing the code, and then run it again to see the effect of your changes. For example, in line 18 you might change <code class="language-javascript">i &lt;= 20</code> to <code class="language-javascript">i &lt;= 50</code> to see some larger Fibonacci numbers. Or make line 9 read <code class="language-javascript">var a = 2, b = 1, tmp;</code> to generate a slightly less famous sequence known as the Lucas numbers. Another <span class="peekaboo-ref" id="phi">experiment worth trying:</span> Change line 15 to <code class="language-javascript">return b / a;</code>. Or just go wild—modify the code in anyway you want, or replace if with your own program. If you ever want to get back to the original state of the code, that’s what the <code class="button">Reset</code> button is for.</p>
       
       <p id="note-phi" class="peekaboo-note shuttered">The ratio of successive Fibonacci numbers converges to a number called phi, also known as the golden ratio. The numerical value is about 1.618. If you’re into this sort of thing, you might want to try the experiment and see what value the ratio of successive Lucas numbers converges to.</p>
       
-      <p>What if you make a mistake? It won’t be the first time a computer program has had a bug in it. With some kinds of errors, the program will run but give a wrong answer. More likely, it won’t run at all, and you’ll see an error message in the console. The most annoying goofs are those that cause the program to run forever—to enter an <em>infinite loop</em>. If you’re lucky, the browser will complain about a script that’s taking too long and offer you an opportunity to stop it. Otherwise, you may have to close the tab or window, or even shut down your browser.</p>
+      <p>What if you make a mistake? It won’t be the first time a computer program has had a bug in it. With some kinds of errors, the program will run but give a wrong answer. More likely, it won’t run at all, and you’ll see an error message if you open up the console. The most annoying goofs are those that cause the program to run forever—to enter an <em>infinite loop</em>. If you’re lucky, the browser will complain about a script that’s taking too long and offer you an opportunity to stop it. Otherwise, you may have to close the tab or window, or even shut down your browser.</p>
       
-      <p>One more thing before moving on. Notice in line 20 the phrase <code class="language-javascript">console.log( ... );</code>. This command is how we direct output to the JavaScript console. Anything inside the parentheses is printed on the console. In a finished program, <code class>console.log</code> commands almost never appear, but they are a useful way of peeking inside the program during development and testing. In this tutorial they are the communications channel we need to have a dialogue with JavaScript.</p>
+      <p>One more thing before moving on. Notice in line 20 the phrase <code class="language-javascript">console.log( ... );</code>. This command is how we direct output to the JavaScript console (and, in this tutorial, to an output panel). In a finished program, <code class="language-javascript">console.log()</code> commands almost never appear, but they are a useful way of peeking inside the program during development and testing. They provide the communications channel we need to have a dialogue with JavaScript. 
       
-      <p>Give it a try in the editor panel below. I have filled in the tired old greeting that has been a cliché of programming language manuals for almost 40 years. Improve on it! Personalize it. Add some more <code>console.log</code> statements of your own. Try putting other kinds of values in the parentheses—maybe an arithmetic expression such as <code class="language-javascript">6 * 7</code>. Again, press the <code class="button">Run</code> button and make sure the result in the console is what you expected to see.</p>
+      <p>Give it a try in the editor panel below. I have filled in the tired old greeting that has been a cliché of programming language manuals for almost 40 years. Improve on it! Personalize it. Add some more <code class="language-javascript">console.log()</code> statements of your own. Try putting other kinds of values in the parentheses—maybe an arithmetic expression such as <code class="language-javascript">6 * 7</code>. Again, press the <code class="button">Run</code> button and make sure the result is what you expected to see.</p>
       
 <div class="cm-div" id="hello" data-output-height="50px">
 <textarea class="cm">console.log("Hello, world!");
@@ -131,7 +119,7 @@ console.log(coinFlip());
 </textarea>
 </div>
            
-      <p>Lines 1, 3, and 5 are function <em>definitions</em>. They create the function—in effect, teaching JavaScript a new trick—but they don’t actually compute anything. The computing happens when you <em>call</em> (or <em>invoke</em> or <em>execute</em>) the function. Each of the <code>console.log</code> statements in lines 7 through 10 calls one of the functions we have just defined.</p>
+      <p>Lines 1, 3, and 5 are function <em>definitions</em>. They create the function—in effect, teaching JavaScript a new trick—but they don’t actually compute anything. The computing happens when you <em>call</em> (or <em>invoke</em> or <em>execute</em>) the function. Each of the <code class="language-javascript">console.log()</code> statements in lines 7 through 10 calls one of the functions we have just defined.</p>
       
       <p>A function definition has four parts:</p>
       
@@ -149,9 +137,9 @@ console.log(coinFlip());
       
       <p>To call a function, just write its name followed by a pair of parentheses enclosing the values that will become inputs (or <em>arguments</em>) to the function. For example, consider the function <code>square</code>, which is defined above with the parameter list <code>(n)</code> and the body <code>{ return n * n }</code>. Invoking this function as <code>square(12)</code> gives the parameter <code>n</code> a value of 12, and so the computation done in the body of the function is 12 &times; 12 = 144. Calling <code>square(15)</code>, on the other hand, returns 225.</p>
            
-      <p>Some functions are associated with or belong to a particular object in the JavaScript system. They are known as <em>methods</em>, and there is a special “dotted” syntax for calling them. We have already met two such methods. In <code>console.log()</code>, the <code>log()</code> function is a method of the <code>console</code> object. Similarly in <code>Math.random()</code>, the <code>random()</code> function is a method of an object named Math. <code>Math.random()</code> returns a random number between 0 and 1.</p>
+      <p>Some functions are associated with or belong to a particular object in the JavaScript system. They are known as <em>methods</em>, and there is a special “dotted” syntax for calling them. We have already met two such methods. In <code class="language-javascript">console.log()</code>, the <code class="language-javascript">log()</code> function is a method of the <code>console</code> object. Similarly in <code class="language-javascript">Math.random()</code>, the <code class="language-javascript">random()</code> function is a method of an object named Math. <code class="language-javascript">Math.random()</code> returns a random number between 0 and 1.</p>
             
-      <p>Exercise: Write a function <code>celsius</code> that does the inverse of <code>fahrenheit</code>. You can insert the definition anywhere you wish in the panel above, then write a <code>console.log()</code> statement that tests your function for the Fahrenheit values 32 and 212. (If you’re stuck, here’s <span class="peekaboo-ref" id="celsius-answer">my answer</span>.)</p>
+      <p>Exercise: Write a function <code>celsius</code> that does the inverse of <code>fahrenheit</code>. You can insert the definition anywhere you wish in the panel above, then write a <code class="language-javascript">console.log()</code> statement that tests your function for the Fahrenheit values 32 and 212. (If you’re stuck, here’s <span class="peekaboo-ref" id="celsius-answer">my answer</span>.)</p>
       
       <p id="note-celsius-answer" class="peekaboo-note shuttered"><code class="language-javascript">function celsius(fahrenheit) { return (fahrenheit - 32) * (100 / 180); }</code></p>
       
@@ -224,7 +212,7 @@ console.log(s.split(" "));       //
       
       <p>As these example show, the items in an array can be numbers or text strings or other data elements, and a single array can hold elements of diverse types. And there’s nothing wrong with an empty array, or with arrays of arrays.</p>
       
-      <p>An array is an <em>ordered</em> collection of items. This is essential to its nature: the items are numbered, counting up from 0. Storing items, retrieving them, or modifying them—it’s all done by the numbers. In the panel below we define two arrays, called <code>nouns</code> and <code>verbs</code>, each with seven elements. Then we can access any element of the arrays with the notation <code>nouns[i]</code> or <code>verbs[i]</code>, where the index <code>i</code> is an integer between 0 and 6. The <code>console.log</code> statement on line 6 selects three items to construct a rudimentary English sentence.</p>
+      <p>An array is an <em>ordered</em> collection of items. This is essential to its nature: the items are numbered, counting up from 0. Storing items, retrieving them, or modifying them—it’s all done by the numbers. In the panel below we define two arrays, called <code>nouns</code> and <code>verbs</code>, each with seven elements. Then we can access any element of the arrays with the notation <code>nouns[i]</code> or <code>verbs[i]</code>, where the index <code>i</code> is an integer between 0 and 6. The <code class="language-javascript">console.log()</code> statement on line 6 selects three items to construct a rudimentary English sentence.</p>
 
 <div class="cm-div" id="arrays" data-output-height="80px">
 <textarea class="cm">var nouns = ["the muffin", "children", "sycamores", "zombies", "grumpiness",
@@ -236,9 +224,9 @@ console.log(nouns[5], verbs[6], nouns[0]);
 </textarea>
 </div>
           
-      <p>Try modifying the <code>console.log</code> statement to generate a different sentence. Or insert a statement such as <code class="language-javascript">verbs[6] = "sniffed"</code> on line 5 to replace one of the words. Feeling adventurous? In selecting an array element, the expression inside the square brackets doesn’t have to be a plain number; it could be any expression that yields a number in the appropriate range, such as <code class="language-javascript">verbs[1 + 4]</code>. The JavaScript fragment <code class="language-javascript">Math.floor(Math.random() * 7)</code> returns a random integer between 0 and 6. Can you use this expression to generate some random nonsense about Big Papi, spaghetti, and so on? <span class="peekaboo-ref" id="nonsense">(Hint.)</span></p>
+      <p>Try modifying the <code class="language-javascript">console.log()</code> statement to generate a different sentence. Or insert a statement such as <code class="language-javascript">verbs[6] = "sniffed"</code> on line 5 to replace one of the words. Feeling adventurous? In selecting an array element, the expression inside the square brackets doesn’t have to be a plain number; it could be any expression that yields a number in the appropriate range, such as <code class="language-javascript">verbs[1 + 4]</code>. The JavaScript fragment <code class="language-javascript">Math.floor(Math.random() * 7)</code> returns a random integer between 0 and 6. Can you use this expression to generate some random nonsense about Big Papi, spaghetti, and so on? <span class="peekaboo-ref" id="nonsense">(Hint.)</span></p>
       
-      <p id="note-nonsense" class="peekaboo-note shuttered">The brute-force method is to copy the expression <code class="language-javascript">Math.floor(Math.random() * 7)</code> three times, putting it into each of the array references. A better idea is to define a function—maybe call it <code>random7()</code>—with the statement <code class="language-javascript">return Math.floor(Math.random() * 7)</code> in the body.</p>
+      <p id="note-nonsense" class="peekaboo-note shuttered">The brute-force method is to copy the expression <code class="language-javascript">Math.floor(Math.random() * 7)</code> three times, putting it into each of the array references. A better idea is to define a function—maybe call it <code>random7()</code>—with the statement <code class="language-javascript">return Math.floor(Math.random() * 7)</code> in the body. Then make the final line of the program read: <code class="language-javascript">console.log(nouns[random7()], verbs[random7()], nouns[random7()]);</code></p>
       
       <p>Arrays have still more tricks. For example, every array comes with a built-in method for reversing the order of its elements, and another for sorting them.</p>
       
@@ -293,7 +281,7 @@ console.log(famousNumbers);
       
       <p>Variable names (a.k.a., <em>identifiers</em>) can be spelled with uppercase and lowercase letters as well as the underscore and dollar sign characters (_, $). Decimal digits are also allowed, except that a digit cannot be the first character. Nothing else is allowed in a name, in particular no spaces or hyphens or other punctuation. Case matters: <code>Lex</code>, <code>lex</code>, and <code>LEX</code> are all different identifiers. A common practice among JavaScripters is to write names in <em>CamelCase</em>: Words are squished together, with the first letter of each word capitalized. Names of variables and functions are done in <em>sulkingCamelCase</em>, with the very first letter lowercased, but objects are named in <em>PrancingCamelCase</em>, with head held high.</p>
       
-      <p>It’s worth emphasizing that the JavaScript system doesn’t care in the least what you name your functions and variables (as long as the names are legal). <code class="language-javascript">function add1(n) { return n + 1 }</code> and <code class="language-javascript">function whynot(asparagus) { return asparagus + 1 }</code> perform exactly the same computation. Choose names that are meaningful to <em>you</em>.</p>
+      <p>It’s worth emphasizing that the JavaScript system doesn’t care in the least what you name your functions and variables (as long as the names are legal). <code class="language-javascript">function add1(n) { return n + 1; }</code> and <code class="language-javascript">function whynot(asparagus) { return asparagus + 1; }</code> perform exactly the same computation. Choose names that are meaningful to <em>you</em>.</p>
       
       <p>A JavaScript variable can hold any kind of value, and the data type can change whenever the variable is assigned a new value. In the sequence of statements <code class="language-javascript">var r = 4; r = "NESW"; r = ['a', 'b', 'c']</code>, <code>r</code> holds first a number, then a string, and finally an array.</p>
       
@@ -365,11 +353,11 @@ function factorialFor(n) {
 console.log(factorialFor(10));</textarea>
 </div>
            
-      <p>The soup of symbols in parentheses on line 2 is what controls the iteration. It has three parts. First, <code class="language-javascript">i = 1;</code> gives the loop counter, or index, an initial value of 1. This statement is executed just once, when the <code>for</code> loop is first entered. Next, <code class="language-javascript">i &lt;= n;</code> is a test applied just before each pass through the loop. If the test returns <code>true</code>, looping continues; otherwise, the whole process comes to an end. Third, <code class="language-javascript">i = i + 1</code> updates the value of <code>i</code> at the end of each iteration.</p>
+      <p>The soup of symbols in parentheses on line 3 is what controls the iteration. It has three parts. First, <code class="language-javascript">i = 1;</code> gives the loop counter, or index, an initial value of 1. This statement is executed just once, when the <code>for</code> loop is first entered. Next, <code class="language-javascript">i &lt;= n;</code> is a test applied just before each pass through the loop. If the test returns <code>true</code>, looping continues; otherwise, the whole process comes to an end. Third, <code class="language-javascript">i = i + 1</code> updates the value of <code>i</code> at the end of each iteration.</p>
       
       <p>The statement on line 4 is the <em>body</em> of the loop; this is what gets executed repeatedly, in this case <code>n</code> times. On each interation, <code>result</code> is multiplied by the current value of <code>i</code>. When the looping is done, <code>result</code> has accumulated a value of 1 &times; 2 &times; 3 &times; . . . &times; <em>n</em>, which is called the factorial of <em>n</em>.</p>
       
-      <p>Quick exercise: Put a <code>console.log()</code> statement inside the loop, so that you can see a running record of how the value of <code>result</code> grows with each interation. <span class="peekaboo-ref" id="for-loop-log">Answer</span>.</p>
+      <p>Quick exercise: Put a <code class="language-javascript">console.log()</code> statement inside the loop, so that you can see a running record of how the value of <code>result</code> grows with each interation. <span class="peekaboo-ref" id="for-loop-log">Answer</span>.</p>
       
       <p id="note-for-loop-log" class="peekaboo-note shuttered">
       <code class="language-javascript">
@@ -378,9 +366,9 @@ for (i = 1; i &lt;= n; i = i + 1) {
   console.log(i, result);
 }</code></p>
       
-      <p>By the way, statements like <code class="language-javascript">i = i + 1</code> are often written in the shortcut notation <code class="language-javascript">i += 1</code>, where the <code>+=</code> does both the addition and the assignment. There’s a whole set of such shortcuts, including <code>-=</code>, <code>*=</code>, and <code>/=</code>. And there are even shorter cuts when all you need to do is add or subtract 1: <code>i++</code> and <code>i--</code>.</p>
+      <p>By the way, statements like <code class="language-javascript">i = i + 1</code> are often written in the shortcut notation <code class="language-javascript">i += 1</code>, where the <code>+=</code> does both the addition and the assignment. There’s a whole set of such shortcuts, including <code>-=</code>, <code>*=</code>, and <code>/=</code>. And there are even shorter shortcuts when all you need to do is add or subtract 1: <code>i++</code> and <code>i--</code>.</p>
       
-       <p>A <code>while</code> loop keeps repeating a block of statements until some stated condition is no longer true. In the code below, the controlling condition is <code>(n &gt;= 0)</code>. In the body of the <code>while</code> loop, we multiply <code>result</code> by the current value of <code>n</code>. The output of the function is identical to that of the <code>for</code>-loop version above. But if you put a <code>console.log()</code> statement inside the loop, you’ll see that the computation takes a different path to that answer.</p>
+       <p>A <code>while</code> loop keeps repeating a block of statements until some stated condition is no longer true. In the code below, the controlling condition is <code>(n &gt;= 0)</code>. In the body of the <code>while</code> loop, we multiply <code>result</code> by the current value of <code>n</code>. The output of the function is identical to that of the <code>for</code>-loop version above. But if you put a <code class="language-javascript">console.log()</code> statement inside the loop, you’ll see that the computation takes a different path to that answer.</p>
 
 <div class="cm-div" id="while" data-output-height="50px">
 <textarea class="cm">
@@ -441,7 +429,7 @@ blueheds();
            
       <p>To understand what’s going on here, you need to know not just JavaScript but also the other languages that go into making things on the Web: HTML, or Hypertext Markup Language, and CSS, or Cascading Style Sheets. (Three languages just to put a splash of color on the screen! Yes, it’s a bit much, but it’s not totally crazy. HTML is for the substance of the page, the content and structure—the nouns. CSS describes how things look—the adjectives. JavaScript makes it move—the verbs.)</p>
       
-      <p>Since we won’t be needing the JavaScript console just now, we can use the space it occupies on the screen for another purpose—to examine the HTML source code of this web page. Put your mouse pointer on the subhead “Scripting the Web” and <span class="peekaboo-ref" id="right-click">right-click</span>; in the drop-down menu, find and select the item “Inspect Element.” A new panel will open, showing the HTML source code with the subheading highlighted. It will look like this:</p>
+      <p>The best way to see what's happening when the program runs is to open up your browser’s developer tools and have a look at the HTML source code of this web page. Put your mouse pointer on the subhead “Scripting the Web” and <span class="peekaboo-ref" id="right-click">right-click</span>; in the drop-down menu, find and select the item “Inspect Element.” A new panel will open, showing the HTML source code with the subheading highlighted. It will look like this:</p>
       
       <p id="note-right-click" class="peekaboo-note shuttered">This should work in all of the major browsers. If you’re on a Macintosh with a one-button mouse, “right-click” === “option-click”. There are also menu commands to open the inspector.</p>
       
@@ -526,7 +514,7 @@ bubbles(50);      // draw 50 bubbles
         
         <li>Line 10, <code class="language-javascript">cvx = cv.getContext("2d");</code>, represents one of those annoying technicalities that I would sweep under the rug if only I could. Turns out we don’t actually draw on the canvas; we draw on a two-dimensional “context” object that’s part of the canvas. (Yes, there is also a three-dimensional context.) All of the drawing commands are methods of the context object <code>cvx</code>.</li>
         
-        <li>The <code>setInterval</code> function in line 11 is something new. We could have defined a <code>for</code> loop to draw <em>n</em>bubbles, but they would be drawn so quickly that they would all appear on the screen instantly. <code>setInterval</code> slows the action down so that we can see individual bubbles popping into existence. It makes a call to <code>drawBubble</code> every 200 milliseconds, or in other words five times a second.</li>
+        <li>The <code>setInterval</code> function in line 11 is something new. We could have defined a <code>for</code> loop to draw <em>n</em> bubbles, but they would be drawn so quickly that they would all appear on the screen instantly. <code>setInterval</code> slows the action down so that we can see individual bubbles popping into existence. It makes a call to <code>drawBubble</code> every 200 milliseconds, or in other words five times a second.</li>
         
         <li>Inside the <code>drawBubble</code> function, we choose a random center point, radius, and color for each bubble (lines 15 to 19). Then lines 20 through 23 do the actual drawing, invoking methods of the <code>cvx</code> object. <code>fillStyle</code> is set to the random color we just computed; <code>beginPath()</code> resets the state of the drawing system; <code>arc()</code> draws a circle; and finally <code>fill()</code> fills the new circle with the chosen color. The six arguments to <code>arc()</code> specify the geometry of the circle as follows:</li>
         <ul>
@@ -546,7 +534,7 @@ bubbles(50);      // draw 50 bubbles
       
       <h4>What’s Next</h4>
 
-      <p>If you’d like to get a head start on a project of your own, download <a href="templates/templates.zip">templates.zip</a>, which has skeleton versions of HTML, CSS, and JavaScript files you can use as a starting point. You can open them all in the Brackets editor. Or you might want to take a look at a <a href="ising/ising.html">little project of mine</a> that I’ll be discussing at the workshop.</p> 
+      <p>If you’d like to get a head start on a project of your own, download <a href="templates/templates.zip">templates.zip</a>, which has skeleton versions of HTML, CSS, and JavaScript files you can use as a starting point. You can open them all in the Brackets editor. Or you might want to take a look at a <a href="ising/ising.html">little project of mine</a> that I discussed at the NESW workshop.</p> 
 
      
     </div> <!--"content"-->
