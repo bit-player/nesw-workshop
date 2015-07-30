@@ -2,18 +2,6 @@ CodeMirror.defaults.lineNumbers = true;
 CodeMirror.defaults.matchBrackets = true;
 CodeMirror.defaults.theme = "solarized light";
 
-/*
-buttons is an array of objects, like so:
-[
-  {
-    name: run,
-    id: "run",
-    text: "Run",
-    click: runHandler,
-  }
-]
-
-*/
 
 function convertToCm() {
   txtAreas = document.querySelectorAll("textarea.cm")
@@ -44,19 +32,6 @@ function convertToCm() {
   }
 }
 
-
-
-//function makeEditor(txtArea) {
-//  var cm = CodeMirror.fromTextArea(txtArea);
-//  
-//  for (i = 0; i < buttons.length; i++) {
-//    var spec = buttons[i];
-//    var btn = document.createElement("button");
-//    btn.textContent = spec.text;
-//    btn.onclick = spec.click;
-//    cm.appendChild(btn);
-//  }
-//}
 
 function runner(e) {
   var outputDiv = this.parentNode.lastChild;
@@ -118,7 +93,7 @@ function format(item) {
 }
 
 
-console.trueLog = console.log
+console.trueLog = console.log     // monkey-patch console.log()
 
 console.log = function() {
   print(arguments);
